@@ -345,7 +345,7 @@ openclaw skills reload
 # 调整超时配置
 skills:
   default_timeout: 60000  # 60 秒
-  max_timeout: 300000     # 5 分钟
+  max_timeout: 300000     # 
 
 # 优化技能代码
 # 添加进度日志

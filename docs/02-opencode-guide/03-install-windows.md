@@ -220,9 +220,9 @@ $env:HTTP_PROXY="http://127.0.0.1:7890"
 
 ---
 
-## 📝 实践练习
+## 📝 实践示例
 
-### 练习 1：完成安装
+### 示例 1：完成安装
 
 ```powershell
 # 1. 检查 Winget
@@ -241,7 +241,7 @@ opencode
 你好
 ```
 
-### 练习 2：配置 API Key
+### 示例 2：配置 API Key
 
 ```powershell
 # 1. 创建配置目录
@@ -256,7 +256,7 @@ mkdir $HOME\.openclaw
 cat $HOME\.openclaw\config.json
 ```
 
-### 练习 3：配置渠道
+### 示例 3：配置渠道
 
 ```powershell
 # 1. 编辑配置文件
@@ -304,11 +304,11 @@ opencode version
 ## 📚 延伸阅读
 
 - [macOS 安装](02-install-macos.md) - Mac 用户看这里
-- [会话管理](04-session-management.md) - 学习管理会话
+- [会话管理](04-session-management.md) - 了解会话管理
 
 ---
 
-## ✅ 本节小结
+## ✅ 本节要点
 
 **你学到了**：
 

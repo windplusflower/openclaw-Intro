@@ -288,7 +288,7 @@ openclaw config set routing.strategy auto
 
 ---
 
-## 本节小结
+## 本节要点
 
 恭喜你完成了 API 配置的学习！让我们回顾一下关键点：
 

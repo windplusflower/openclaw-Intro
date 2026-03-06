@@ -259,7 +259,7 @@ Rename-Item -Path "$env:USERPROFILE\.openclaw" -NewName ".openclaw.backup"
 
 ---
 
-## 本节小结
+## 本节要点
 
 - **配置目录**：所有配置存储在 `~/.openclaw/`，跨平台一致
 - **核心文件**：`config.json`（主配置）、`channels.json`（渠道）、`skills.json`（技能）

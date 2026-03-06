@@ -236,7 +236,7 @@ openclaw message send \
   --channel "feishu:${CHAT_ID}" \
   --text "📢 **系统通知**
 
-会议将在 **30 分钟后** 开始
+会议将在 **后** 开始
 
 📍 地点：会议室 A
 👥 参会人：@所有人
@@ -583,7 +583,7 @@ LAST_MODIFIED=$(stat -c %Y "$DOC_PATH")
 CURRENT_TIME=$(date +%s)
 DIFF=$((CURRENT_TIME - LAST_MODIFIED))
 
-# 如果 5 分钟内有更新
+# 如果 内有更新
 if [ $DIFF -lt 300 ]; then
   DOC_CONTENT=$(head -20 "$DOC_PATH")
   
@@ -602,7 +602,7 @@ fi
 
 ---
 
-## 本节小结
+## 本节要点
 
 ### 关键要点
 

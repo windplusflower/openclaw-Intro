@@ -130,8 +130,8 @@ opencode session list --recent
 **输出示例**：
 ```
 会话列表：
-  ✅ work-project      (活跃)    最后使用：5 分钟前
-  📁 learning-python              最后使用：2 小时前
+  ✅ work-project      (活跃)    最后使用：前
+  📁 learning-python              最后使用：前
   💬 daily-chat                   最后使用：昨天
   📊 data-analysis                最后使用：3 天前
 ```
@@ -419,9 +419,9 @@ notepad $env:USERPROFILE\.openclaw\config.json
 
 ---
 
-## 🏋️ 实践练习
+## 📝 实践示例
 
-### 练习 1：创建和切换会话
+### 示例 1：创建和切换会话
 
 ```bash
 # 步骤 1：创建三个会话
@@ -442,10 +442,10 @@ opencode session info
 opencode session prev
 ```
 
-### 练习 2：管理多个项目
+### 示例 2：管理多个项目
 
 ```bash
-# 场景：同时开发两个项目
+# 场景：同时处理两个项目
 
 # 项目 A：网站开发
 opencode session new --name "website-dev"
@@ -463,7 +463,7 @@ opencode session new --name "data-analysis"
 opencode session switch "website-dev"
 ```
 
-### 练习 3：清理旧会话
+### 示例 3：清理旧会话
 
 ```bash
 # 步骤 1：查看所有会话
@@ -564,7 +564,7 @@ opencode history export --session "important" | Out-File -Encoding UTF8 "$env:US
 
 ---
 
-## ✅ 本节小结
+## ✅ 本节要点
 
 **你学到了**：
 

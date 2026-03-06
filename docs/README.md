@@ -1,17 +1,17 @@
-# OpenClaw 零基础教学文档
+# OpenClaw 零基础科普扫盲文档
 
-> 让零基础用户从"会用 AI 聊天"到"独立使用 OpenClaw 构建自动化工作流"
+> 让零基础用户了解 OpenClaw 和 AI 助手
 
 ---
 
-## 📚 课程结构
+## 📚 文档结构
 
-本课程分为 2 个阶段，共 7-10 小时：
+本文档分为 2 个部分，帮助您系统了解 OpenClaw：
 
-| 阶段 | 主题 | 预计时间 | 完成目标 |
-|------|------|----------|----------|
-| [阶段一](01-ai-basics/) | AI 原理与终端基础 | 3-4 小时 | 理解 AI 工作原理，克服终端恐惧 |
-| [阶段二](02-opencode-core/) | OpenClaw 核心使用 | 4-6 小时 | 能独立安装、配置和使用 OpenClaw |
+| 部分 | 主题 | 内容说明 |
+|------|------|----------|
+| [第一部分](01-ai-intro/) | AI 入门 | 理解 AI 工作原理，了解终端基础 |
+| [第二部分](02-opencode-guide/) | OpenClaw 指南 | 了解 OpenClaw 安装、配置和使用 |
 
 ---
 
@@ -25,10 +25,10 @@
 
 ---
 
-## 📖 学习路线
+## 📖 阅读路线
 
 ```
-阶段一：AI 原理与终端基础
+第一部分：AI 入门
 ├── AI 如何工作
 ├── Token 概念
 ├── AI 为什么会胡说
@@ -38,7 +38,7 @@
 ├── 代码是什么
 └── API Key 配置
 
-阶段二：OpenClaw 核心使用
+第二部分：OpenClaw 指南
 ├── OpenClaw 是什么
 ├── macOS 安装
 ├── Windows 安装
@@ -51,7 +51,7 @@
 
 ## 💻 双平台支持
 
-本课程同时支持 **macOS** 和 **Windows** 用户：
+本文档同时支持 **macOS** 和 **Windows** 用户：
 
 - 🍎 **macOS 用户**：使用 Homebrew 安装，终端命令以 `brew` 开头
 - 🪟 **Windows 用户**：使用 Winget 安装，终端使用 PowerShell
@@ -62,31 +62,31 @@
 
 ## 📝 配套材料
 
-1. [终端速查手册](03-appendix/command-cheatsheet.md) - Mac/Windows 命令对照表
-2. [安装指南](02-opencode-core/) - Mac/Windows 图文步骤
-3. [配置文件位置速查](03-appendix/config-locations.md) - 双平台路径对照
-4. [常见问题 FAQ](03-appendix/faq.md) - Mac/Windows 分别说明
-5. [问题排查](03-appendix/troubleshooting.md) - 常见错误和解决方法
+1. [终端速查手册](03-reference/command-cheatsheet.md) - Mac/Windows 命令对照表
+2. [安装指南](02-opencode-guide/) - Mac/Windows 图文步骤
+3. [配置文件位置速查](03-reference/config-locations.md) - 双平台路径对照
+4. [常见问题 FAQ](03-reference/faq.md) - Mac/Windows 分别说明
+5. [问题排查](03-reference/troubleshooting.md) - 常见错误和解决方法
 
 ---
 
-## 🎓 结业标准
+## 🎯 阅读收获
 
-完成本课程后，你将能：
+阅读完本文档后，您将能：
 
 - ✅ 理解 AI 工作原理和局限
-- ✅ 熟练使用终端基础命令（Mac/Windows）
+- ✅ 了解终端基础命令（Mac/Windows）
 - ✅ 理解代码和 API 概念
-- ✅ OpenClaw 安装和配置（Mac/Windows）
-- ✅ 多渠道配置和切换
-- ✅ 技能加载和使用
-- ✅ 基础问题排查
+- ✅ 了解 OpenClaw 安装和配置（Mac/Windows）
+- ✅ 了解多渠道配置和切换
+- ✅ 了解技能加载和使用
+- ✅ 了解基础问题排查
 
 ---
 
-## 🚀 开始学习
+## 🚀 开始阅读
 
-从 [阶段一：AI 原理与终端基础](01-ai-basics/) 开始！
+从 [第一部分：AI 入门](01-ai-intro/) 开始！
 
 ---
 
