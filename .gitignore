@@ -1,0 +1,15 @@
+# 临时文件
+*.tmp
+*.swp
+*~
+
+# 编辑器文件
+.vscode/
+.idea/
+
+# 日志文件
+*.log
+
+# 系统文件
+.DS_Store
+Thumbs.db
