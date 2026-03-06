@@ -276,7 +276,7 @@ Remove-Item -r test_folder # Windows
 # 1. 输入 cd，然后按空格
 # 2. 输入 D，然后按 Tab
 # 3. 观察自动补全
-# 4. 重复练习，熟悉 Tab 补全
+# 4. 重复操作，熟悉 Tab 补全
 ```
 
 ---
