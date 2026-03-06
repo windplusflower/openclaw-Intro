@@ -12,15 +12,18 @@ OpenClaw 支持多种主流 AI 服务商，你可以根据需求选择：
 
 | 服务商 | 推荐模型 | 特点 |
 |--------|----------|------|
-| **OpenAI** | gpt-4o, gpt-4o-mini | 生态完善，工具调用能力强，适合复杂任务 |
-| **Anthropic** | claude-sonnet-4-20250514, claude-opus-4-20250514 | 长上下文处理优秀，代码能力强，适合深度分析 |
+| **OpenAI** | gpt-4-turbo | 生态完善，工具调用能力强，适合复杂任务 |
+| **Anthropic** | claude-sonnet-4, claude-opus-4.1 | 长上下文处理优秀（200K），代码能力强，适合深度分析 |
 
 ### 国内服务商
 
 | 服务商 | 推荐模型 | 特点 |
 |--------|----------|------|
-| **百度文心** | ernie-4.0-turbo | 中文理解优秀，价格亲民，适合日常使用 |
-| **阿里通义** | qwen-max, qwen-plus | 多模态能力强，代码生成优秀，性价比高 |
+| **DeepSeek** | deepseek-v3 | 价格极低，性能优秀，128K 上下文 |
+| **阿里通义** | qwen2.5-1m, qwen-max | 多模态能力强，支持 1M 上下文，性价比高 |
+| **MiniMax** | minimax-m2.5 | 低价高性能，约$1.1/百万 tokens |
+| **Kimi（月之暗面）** | kimi-k2.5 | 长文本处理优秀 |
+| **智谱 AI** | glm-5 | 国产大模型，价格亲民 |
 
 ### 选择建议
 
@@ -73,7 +76,7 @@ nano ~/.openclaw/workspace/.env
 
 ```env
 OPENAI_API_KEY=sk-your-api-key-here
-OPENAI_MODEL=gpt-4o
+OPENAI_MODEL=gpt-4-turbo
 ```
 
 #### 方式三：命令行参数
@@ -81,7 +84,7 @@ OPENAI_MODEL=gpt-4o
 启动时直接指定：
 
 ```bash
-openclaw start --api-key sk-your-api-key-here --model gpt-4o
+openclaw start --api-key sk-your-api-key-here --model gpt-4-turbo
 ```
 
 ### 第三步：测试连接
@@ -124,11 +127,11 @@ openclaw send "你好，请回复一个表情符号"
 ```bash
 # 环境变量
 export ANTHROPIC_API_KEY="sk-ant-your-key-here"
-export ANTHROPIC_MODEL="claude-sonnet-4-20250514"
+export ANTHROPIC_MODEL="claude-sonnet-4"
 
 # 或写入配置文件
 echo 'ANTHROPIC_API_KEY=sk-ant-your-key-here' >> ~/.openclaw/workspace/.env
-echo 'ANTHROPIC_MODEL=claude-sonnet-4-20250514' >> ~/.openclaw/workspace/.env
+echo 'ANTHROPIC_MODEL=claude-sonnet-4' >> ~/.openclaw/workspace/.env
 ```
 
 ### 测试连接
@@ -213,12 +216,12 @@ OpenClaw 支持同时配置多个 API，实现智能切换和负载均衡。
 # 主 API（默认使用）
 PRIMARY_PROVIDER=openai
 OPENAI_API_KEY=sk-primary-key
-OPENAI_MODEL=gpt-4o
+OPENAI_MODEL=gpt-4-turbo
 
 # 备用 API
 FALLBACK_PROVIDER=anthropic
 ANTHROPIC_API_KEY=sk-ant-fallback-key
-ANTHROPIC_MODEL=claude-sonnet-4-20250514
+ANTHROPIC_MODEL=claude-sonnet-4
 
 # 国内 API（用于简单任务节省成本）
 DOMESTIC_PROVIDER=baidu
@@ -254,7 +257,7 @@ openclaw config set routing.strategy auto
 
 ---
 
-## 费用对比
+## 费用对比（2026 年）
 
 以下是各服务商的大致价格（以输入 + 输出综合计算）：
 
@@ -262,29 +265,32 @@ openclaw config set routing.strategy auto
 
 | 模型 | 输入价格 | 输出价格 | 适用场景 |
 |------|----------|----------|----------|
-| GPT-4o | $2.50 | $10.00 | 高精度任务 |
-| GPT-4o-mini | $0.15 | $0.60 | 日常使用 |
-| Claude-Sonnet | $3.00 | $15.00 | 复杂分析 |
-| Claude-Haiku | $0.80 | $4.00 | 快速响应 |
+| GPT-4 | $30 | $60 | 高精度任务 |
+| Claude-Sonnet 4 | $8 | $24 | 复杂分析 |
+| Claude-Haiku | $2 | $8 | 快速响应 |
 
 ### 国内服务商（人民币/百万 Tokens）
 
 | 模型 | 输入价格 | 输出价格 | 适用场景 |
 |------|----------|----------|----------|
-| 文心 4.0 | ¥8.00 | ¥8.00 | 通用任务 |
-| 文心 Turbo | ¥4.00 | ¥4.00 | 日常对话 |
-| 通义 Max | ¥12.00 | ¥12.00 | 专业场景 |
-| 通义 Plus | ¥4.00 | ¥4.00 | 性价比之选 |
+| DeepSeek V3 | 约¥1-2 | 约¥1-2 | 性价比之王 |
+| MiniMax M2.5 | 约¥8 | 约¥8 | 通用任务 |
+| Kimi K2.5 | 低价 | 低价 | 长文本处理 |
+| GLM-5 | 低价 | 低价 | 日常对话 |
+| 通义 Max | ¥40 | ¥120 | 专业场景 |
+| 通义 Plus | ¥4 | ¥12 | 性价比之选 |
+
+> 💡 **重要趋势**：中国开源模型价格远低于国外模型（约 30-60 倍差价）。2026 年 2 月，中国模型调用量首次超过美国。
 
 ### 成本估算示例
 
 假设每天使用 10 万 Tokens（约 50 次对话）：
 
-- **GPT-4o-mini**：约 $0.075/天 ≈ ¥0.54/天
-- **文心 Turbo**：约 ¥0.40/天
-- **通义 Plus**：约 ¥0.40/天
+- **DeepSeek V3**：约 ¥0.1-0.2/天
+- **MiniMax M2.5**：约 ¥0.8/天
+- **GPT-4**：约 $3-9/天 ≈ ¥20-60/天
 
-> 💡 **省钱技巧**：简单任务用国内 API，复杂任务切换到国际 API，综合成本可降低 60% 以上。
+> 💡 **省钱技巧**：优先使用国内模型（如 DeepSeek V3），综合成本可降低 90% 以上。
 
 ---
 
