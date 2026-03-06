@@ -1,5 +1,5 @@
 site_name: OpenClaw 科普扫盲文档
-site_description: 零基础了解 OpenClaw 和 AI 助手
+site_description: 从零基础到独立使用 OpenClaw 构建 AI 工作流
 site_author: windflower
 repo_url: https://github.com/windplusflower/openclaw-Intro
 repo_name: windplusflower/openclaw-Intro
@@ -45,9 +45,9 @@ markdown_extensions:
   - pymdownx.tabbed
 
 nav:
-  - 首页：README.md
+  - 首页：index.md
   - 第一部分：AI 入门:
-    - 01-ai-intro/README.md
+    - AI 入门：01-ai-intro/index.md
     - AI 如何工作：01-ai-intro/01-how-ai-works.md
     - Token 概念：01-ai-intro/02-token-concept.md
     - AI 为什么会胡说：01-ai-intro/03-ai-hallucination.md
@@ -56,7 +56,7 @@ nav:
     - 文件路径概念：01-ai-intro/06-file-paths.md
     - 代码是什么：01-ai-intro/07-code-basics.md
   - 第二部分：OpenClaw 指南:
-    - 02-opencode-guide/README.md
+    - OpenClaw 指南：02-opencode-guide/index.md
     - OpenClaw 是什么：02-opencode-guide/01-what-is-opencode.md
     - macOS 安装：02-opencode-guide/02-install-macos.md
     - Windows 安装：02-opencode-guide/03-install-windows.md
