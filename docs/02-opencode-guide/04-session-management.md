@@ -295,8 +295,10 @@ opencode history export --session "work-project" | Out-File -Encoding UTF8 work-
 | 模型 | 上下文窗口 | 约等于文字 |
 |------|-----------|-----------|
 | Qwen3.5-Plus | 32K tokens | ~25,000 汉字 |
-| GPT-4 | 8K tokens | ~6,000 汉字 |
-| Claude-3 | 200K tokens | ~150,000 汉字 |
+| GPT-5.4 | 1.05M tokens | ~800,000 汉字 |
+| Claude Opus 4.6 | 1M tokens | ~800,000 汉字 |
+| Claude Sonnet 4.6 | 1M tokens | ~800,000 汉字 |
+| Gemini 3.1 Pro | 1M tokens | ~800,000 汉字 |
 
 ### 超出限制会怎样
 

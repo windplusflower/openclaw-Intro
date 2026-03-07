@@ -190,12 +190,15 @@ Channel（渠道发送）
 
 OpenClaw 需要配置 AI 服务的 API Key：
 
-#### 国外模型（每 1M tokens）
+#### 国外模型（每 1M tokens，2026 年 3 月）
 
 | 服务商 | 价格范围 | 适合场景 |
 |--------|---------|---------|
-| **OpenAI GPT-4** | $30 输入 / $60 输出 | 通用场景 |
-| **Anthropic Claude** | $8 输入 / $24 输出 | 长文档处理 |
+| **OpenAI GPT-5.4** | $2.50 输入 / $15 输出 | 通用场景，1.05M 上下文 |
+| **OpenAI GPT-5.4 Pro** | $30 输入 / $180 输出 | 深度推理 |
+| **Anthropic Claude Opus 4.6** | $5 输入 / $25 输出 | 复杂任务，1M 上下文 |
+| **Anthropic Claude Sonnet 4.6** | $3 输入 / $15 输出 | 高性价比，1M 上下文 |
+| **Google Gemini 3.1 Pro** | $2 输入 / $12 输出 | 多模态，1M 上下文 |
 
 #### 国内模型（每 1M tokens）
 
