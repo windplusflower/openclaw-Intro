@@ -303,8 +303,8 @@ openclaw version
 
 ## 📚 延伸阅读
 
-- [macOS 安装](02-install-macos.md) - Mac 用户看这里
-- [会话管理](04-session-management.md) - 了解会话管理
+- [macOS 安装](./02-install-macos.md) - Mac 用户看这里
+- [会话管理](./04-session-management.md) - 了解会话管理
 
 ---
 
@@ -320,4 +320,4 @@ openclaw version
 - ✅ 配置渠道
 - ✅ 问题排查方法
 
-**下一节**：[会话管理](04-session-management.md)
+**下一节**：[会话管理](./04-session-management.md)

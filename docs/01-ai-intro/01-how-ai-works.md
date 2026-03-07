@@ -155,8 +155,8 @@ AI 可能生成**看似合理但完全错误**的内容，特别是：
 
 ## 📚 延伸阅读
 
-- [Token 概念](02-token-concept.md) - 理解 AI 如何计费
-- [AI 为什么会胡说](03-ai-hallucination.md) - 深入理解 AI 幻觉
+- [Token 概念](./02-token-concept.md) - 理解 AI 如何计费
+- [AI 为什么会胡说](./03-ai-hallucination.md) - 深入理解 AI 幻觉
 
 ---
 
@@ -169,4 +169,4 @@ AI 可能生成**看似合理但完全错误**的内容，特别是：
 - ✅ AI 与人类的区别
 - ✅ AI 会胡说，需要验证
 
-**下一节**：[Token 概念](02-token-concept.md)
+**下一节**：[Token 概念](./02-token-concept.md)

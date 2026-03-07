@@ -264,8 +264,8 @@ AI：生成了 500 字的总结
 
 ## 📚 延伸阅读
 
-- [AI 如何工作](01-how-ai-works.md) - 理解 AI 工作原理
-- [AI 为什么会胡说](03-ai-hallucination.md) - 理解 AI 幻觉
+- [AI 如何工作](./01-how-ai-works.md) - 理解 AI 工作原理
+- [AI 为什么会胡说](./03-ai-hallucination.md) - 理解 AI 幻觉
 
 ---
 
@@ -279,4 +279,4 @@ AI：生成了 500 字的总结
 - ✅ 上下文窗口限制
 - ✅ 省钱技巧
 
-**下一节**：[AI 为什么会胡说](03-ai-hallucination.md)
+**下一节**：[AI 为什么会胡说](./03-ai-hallucination.md)

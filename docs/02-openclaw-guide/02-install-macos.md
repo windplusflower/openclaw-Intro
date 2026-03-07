@@ -283,8 +283,8 @@ openclaw version
 
 ## 📚 延伸阅读
 
-- [Windows 安装](03-install-windows.md) - Windows 用户看这里
-- [会话管理](04-session-management.md) - 学习管理会话
+- [Windows 安装](./03-install-windows.md) - Windows 用户看这里
+- [会话管理](./04-session-management.md) - 学习管理会话
 
 ---
 
@@ -299,4 +299,4 @@ openclaw version
 - ✅ 配置渠道
 - ✅ 问题排查方法
 
-**下一节**：[Windows 安装](03-install-windows.md)
+**下一节**：[Windows 安装](./03-install-windows.md)

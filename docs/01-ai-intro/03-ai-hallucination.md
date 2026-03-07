@@ -239,8 +239,8 @@ AI 不理解"真"和"假"，只是：
 
 ## 📚 延伸阅读
 
-- [AI 如何工作](01-how-ai-works.md) - 理解 AI 工作原理
-- [Token 概念](02-token-concept.md) - 理解 AI 计费
+- [AI 如何工作](./01-how-ai-works.md) - 理解 AI 工作原理
+- [Token 概念](./02-token-concept.md) - 理解 AI 计费
 
 ---
 
@@ -254,4 +254,4 @@ AI 不理解"真"和"假"，只是：
 - ✅ 如何验证 AI 回答
 - ✅ 避免被忽悠的技巧
 
-**下一节**：[终端入门](04-terminal-intro.md)
+**下一节**：[终端入门](./04-terminal-intro.md)

@@ -1,8 +1,8 @@
 site_name: OpenClaw 科普扫盲文档
 site_description: 从零基础到独立使用 OpenClaw 构建 AI 工作流
 site_author: windflower
-repo_url: https://github.com/windplusflower/openclaw-Intro
-repo_name: windplusflower/openclaw-Intro
+repo_url: https://github.com/windplusflower/openclaw-docs
+repo_name: windplusflower/openclaw-docs
 
 theme:
   name: material
@@ -43,32 +43,32 @@ markdown_extensions:
   - pymdownx.tabbed
 
 nav:
-  - 首页：index.md
+  - 首页：docs/index.md
   - AI 入门:
-    - 01-ai-intro/01-how-ai-works.md
-    - 01-ai-intro/02-token-concept.md
-    - 01-ai-intro/03-ai-hallucination.md
-    - 01-ai-intro/04-terminal-intro.md
-    - 01-ai-intro/05-common-commands.md
-    - 01-ai-intro/06-file-paths.md
-    - 01-ai-intro/07-code-basics.md
+    - docs/01-ai-intro/01-how-ai-works.md
+    - docs/01-ai-intro/02-token-concept.md
+    - docs/01-ai-intro/03-ai-hallucination.md
+    - docs/01-ai-intro/04-terminal-intro.md
+    - docs/01-ai-intro/05-common-commands.md
+    - docs/01-ai-intro/06-file-paths.md
+    - docs/01-ai-intro/07-code-basics.md
   - OpenClaw 指南:
-    - 02-opencode-guide/01-what-is-opencode.md
-    - 02-opencode-guide/02-install-macos.md
-    - 02-opencode-guide/03-install-windows.md
-    - 02-opencode-guide/04-session-management.md
-    - 02-opencode-guide/05-channel-setup.md
-    - 02-opencode-guide/06-skill-system.md
+    - docs/02-openclaw-guide/01-what-is-openclaw.md
+    - docs/02-openclaw-guide/02-install-macos.md
+    - docs/02-openclaw-guide/03-install-windows.md
+    - docs/02-openclaw-guide/04-session-management.md
+    - docs/02-openclaw-guide/05-channel-setup.md
+    - docs/02-openclaw-guide/06-skill-system.md
   - 参考:
-    - 03-reference/command-cheatsheet.md
-    - 03-reference/config-locations.md
-    - 03-reference/api-setup.md
-    - 03-reference/automation-examples.md
-    - 03-reference/faq.md
-    - 03-reference/troubleshooting.md
-  - 常见问题：04-faq.md
+    - docs/03-reference/command-cheatsheet.md
+    - docs/03-reference/config-locations.md
+    - docs/03-reference/api-setup.md
+    - docs/03-reference/automation-examples.md
+    - docs/03-reference/faq.md
+    - docs/03-reference/troubleshooting.md
+  - 常见问题：docs/04-faq.md
 
 extra:
   social:
     - icon: fontawesome/brands/github
-      link: https://github.com/windplusflower/openclaw-Intro
+      link: https://github.com/windplusflower/openclaw-docs

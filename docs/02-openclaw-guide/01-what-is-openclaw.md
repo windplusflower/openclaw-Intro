@@ -285,8 +285,8 @@ OpenClaw 需要配置 AI 服务的 API Key：
 
 ## 📚 延伸阅读
 
-- [macOS 安装](02-install-macos.md) - Mac 用户下一步
-- [Windows 安装](03-install-windows.md) - Windows 用户下一步
+- [macOS 安装](./02-install-macos.md) - Mac 用户下一步
+- [Windows 安装](./03-install-windows.md) - Windows 用户下一步
 
 ---
 
@@ -300,4 +300,4 @@ OpenClaw 需要配置 AI 服务的 API Key：
 - ✅ OpenClaw 架构和工作流程
 - ✅ 费用估算
 
-**下一节**：[macOS 安装](02-install-macos.md)
+**下一节**：[macOS 安装](./02-install-macos.md)

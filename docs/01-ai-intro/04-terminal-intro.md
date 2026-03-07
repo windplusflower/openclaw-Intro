@@ -351,8 +351,8 @@ mv       # 移动
 
 ## 📚 延伸阅读
 
-- [常用命令](05-common-commands.md) - 20 个常用命令详解
-- [文件路径概念](06-file-paths.md) - 绝对路径 vs 相对路径
+- [常用命令](./05-common-commands.md) - 20 个常用命令详解
+- [文件路径概念](./06-file-paths.md) - 绝对路径 vs 相对路径
 
 ---
 
@@ -367,4 +367,4 @@ mv       # 移动
 - ✅ 常用快捷键
 - ✅ 安全注意事项
 
-**下一节**：[常用命令](05-common-commands.md)
+**下一节**：[常用命令](./05-common-commands.md)

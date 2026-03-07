@@ -371,9 +371,9 @@ rm system_file   # ❌ 需要 sudo
 
 ## 📚 延伸阅读
 
-- [终端入门](04-terminal-intro.md) - 终端基础操作
-- [文件路径概念](06-file-paths.md) - 绝对路径 vs 相对路径
-- [命令速查表](../03-appendix/command-cheatsheet.md) - 完整命令对照表
+- [终端入门](./04-terminal-intro.md) - 终端基础操作
+- [文件路径概念](./06-file-paths.md) - 绝对路径 vs 相对路径
+- [命令速查表](../03-reference/command-cheatsheet.md) - 完整命令对照表
 
 ---
 
@@ -386,4 +386,4 @@ rm system_file   # ❌ 需要 sudo
 - ✅ 实用组合技巧
 - ✅ 常见错误和解决方法
 
-**下一节**：[文件路径概念](06-file-paths.md)
+**下一节**：[文件路径概念](./06-file-paths.md)

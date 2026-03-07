@@ -763,7 +763,7 @@ channels:
 
 ## 下一节
 
-👉 **06-advanced-configuration.md** - 高级配置
+👉 **[技能系统](./06-skill-system.md)** - 加载和使用扩展技能
 
 在下一节中，你将学习：
 - 环境变量配置

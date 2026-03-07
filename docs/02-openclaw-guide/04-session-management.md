@@ -597,7 +597,7 @@ oc history search "关键词"      # 搜索历史
 
 ## ➡️ 下一节
 
-[高级功能](05-advanced-features.md) - 探索 OpenClaw 的高级功能
+[渠道配置](./05-channel-setup.md) - 配置 Discord、飞书、钉钉等消息渠道
 
 ---
 

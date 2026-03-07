@@ -323,8 +323,8 @@ else:
 
 ## 📚 延伸阅读
 
-- [文件路径概念](06-file-paths.md) - 代码中的路径表示
-- [API Key 配置](08-api-key-setup.md) - 配置 API 的代码
+- [文件路径概念](./06-file-paths.md) - 代码中的路径表示
+- [API Key 配置](../03-reference/api-setup.md) - 配置 API 的代码
 
 ---
 
@@ -338,4 +338,4 @@ else:
 - ✅ AI 如何写代码
 - ✅ 代码安全注意事项
 
-**下一节**：[API Key 配置](08-api-key-setup.md)
+**下一节**：[API Key 配置](../03-reference/api-setup.md)
