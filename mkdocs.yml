@@ -43,7 +43,6 @@ markdown_extensions:
   - pymdownx.tabbed
 
 nav:
-  - 首页：index.md
   - AI 入门:
     - 01-ai-intro/01-how-ai-works.md
     - 01-ai-intro/02-token-concept.md
