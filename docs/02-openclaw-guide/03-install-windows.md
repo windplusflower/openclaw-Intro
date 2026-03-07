@@ -15,7 +15,9 @@
 
 ---
 
-## 🔧 方法一：Winget 安装（推荐）
+## 🚀 官方推荐安装方法：Onboard 安装
+
+OpenClaw 提供官方 `onboard` 命令，安装后让 AI 帮你完成所有配置！
 
 ### 步骤 1：检查 Winget 是否可用
 
@@ -24,13 +26,17 @@
 winget --version
 
 # 如果提示找不到命令，需要安装 Winget
-# 访问 Microsoft Store 搜索"App Installer"
+# 1. 打开 Microsoft Store
+# 2. 搜索 "App Installer"
+# 3. 点击安装
 # 或者从 GitHub 下载：https://github.com/microsoft/winget-cli/releases
 ```
 
 ### 步骤 2：安装 OpenClaw
 
 ```powershell
+# 以管理员身份运行 PowerShell（右键 → 以管理员身份运行）
+
 # 安装 OpenClaw
 winget install openclaw
 
@@ -38,29 +44,67 @@ winget install openclaw
 openclaw version
 ```
 
-### 步骤 3：配置 API Key
+### 步骤 3：运行 Onboard 向导（推荐！）
 
 ```powershell
-# 创建配置目录
-mkdir $HOME\.openclaw
-
-# 创建配置文件
-@{
-    api_key = "你的 API Key"
-} | ConvertTo-Json | Out-File -Encoding UTF8 $HOME\.openclaw\config.json
-
-# 验证配置
-cat $HOME\.openclaw\config.json
+# 启动配置向导
+openclaw onboard
 ```
+
+这个向导会：
+- ✅ 检测你的系统环境
+- ✅ 引导你配置 API Key
+- ✅ 测试连接是否正常
+- ✅ 完成基础设置
+
+---
+
+## 💬 让 AI 帮你完成配置（不要手动改！）
+
+安装完成后，**不要手动编辑配置文件**！直接告诉 OpenClaw 你想要什么：
+
+### 示例 1：配置百炼 API
+
+```
+你：帮我配置百炼 API
+AI：好的，请提供你的百炼 API Key（从 https://bailian.console.aliyun.com 获取）
+你：sk-xxxxxxxxxxxxxxxx
+AI：已配置百炼 API，正在测试连接... 连接成功！
+```
+
+### 示例 2：配置上下文压缩
+
+```
+你：帮我设置上下文压缩
+AI：已为你启用上下文压缩功能。当对话超过 4000 tokens 时会自动压缩历史记录。
+```
+
+### 示例 3：配置多个 API
+
+```
+你：我想同时配置 OpenAI 和百炼
+AI：好的，请依次提供两个 API Key...
+```
+
+### 示例 4：配置 Discord 机器人
+
+```
+你：帮我配置 Discord 机器人
+AI：请提供你的 Discord Bot Token...
+```
+
+> 💡 **核心理念**：让 AI 帮你做，不要手动改配置文件！
 
 ---
 
 ## 📥 方法二：Scoop 安装
 
+如果你更喜欢 Scoop：
+
 ### 步骤 1：安装 Scoop（如果未安装）
 
 ```powershell
-# 安装 Scoop
+# 以管理员身份运行 PowerShell
 Set-ExecutionPolicy -ExecutionPolicy RemoteSigned -Scope CurrentUser
 Invoke-RestMethod -Uri https://get.scoop.sh | Invoke-Expression
 
@@ -76,35 +120,9 @@ scoop install openclaw
 
 # 验证安装
 openclaw version
-```
 
----
-
-## 📥 方法三：手动安装
-
-### 步骤 1：下载安装包
-
-```powershell
-# 访问 GitHub Releases
-# https://github.com/openclaw-ai/openclaw/releases
-
-# 下载最新的 Windows 安装包
-# 通常是 openclaw-windows-x64.zip
-```
-
-### 步骤 2：解压并配置
-
-```powershell
-# 1. 解压到 C:\Program Files\OpenClaw
-# 2. 添加到系统 PATH
-
-# 创建配置目录
-mkdir $HOME\.openclaw
-
-# 创建配置文件
-@{
-    api_key = "你的 API Key"
-} | ConvertTo-Json | Out-File -Encoding UTF8 $HOME\.openclaw\config.json
+# 运行 onboard 向导
+openclaw onboard
 ```
 
 ---
@@ -134,51 +152,6 @@ openclaw
 
 ---
 
-## ⚙️ 配置渠道
-
-### 配置 Discord（可选）
-
-```powershell
-# 编辑配置文件
-notepad $HOME\.openclaw\config.json
-
-# 添加 Discord 配置
-{
-  "api_key": "你的 API Key",
-  "channels": {
-    "discord": {
-      "token": "你的 Discord Bot Token"
-    }
-  }
-}
-
-# 重启 OpenClaw
-openclaw restart
-```
-
-### 配置飞书（可选）
-
-```powershell
-# 编辑配置文件
-notepad $HOME\.openclaw\config.json
-
-# 添加飞书配置
-{
-  "api_key": "你的 API Key",
-  "channels": {
-    "feishu": {
-      "app_id": "你的飞书 App ID",
-      "app_secret": "你的飞书 App Secret"
-    }
-  }
-}
-
-# 重启 OpenClaw
-openclaw restart
-```
-
----
-
 ## 🔍 问题排查
 
 ### 问题 1：winget 命令找不到
@@ -186,7 +159,7 @@ openclaw restart
 ```powershell
 # 解决方案：安装 Winget
 # 1. 打开 Microsoft Store
-# 2. 搜索"App Installer"
+# 2. 搜索 "App Installer"
 # 3. 点击安装
 ```
 
@@ -196,8 +169,11 @@ openclaw restart
 # 解决方案：检查 PATH
 echo $env:PATH
 
-# 手动添加 OpenClaw 到 PATH
+# 手动添加 OpenClaw 到 PATH（临时）
 $env:PATH += ";C:\Program Files\OpenClaw"
+
+# 永久添加（推荐）
+[Environment]::SetEnvironmentVariable("Path", $env:PATH + ";C:\Program Files\OpenClaw", "User")
 ```
 
 ### 问题 3：权限错误
@@ -213,66 +189,76 @@ $env:PATH += ";C:\Program Files\OpenClaw"
 # 检查网络连接
 ping github.com
 
-# 如果使用代理，配置代理
+# 如果使用代理，配置代理（临时）
 $env:HTTPS_PROXY="http://127.0.0.1:7890"
 $env:HTTP_PROXY="http://127.0.0.1:7890"
+
+# 永久配置代理
+[Environment]::SetEnvironmentVariable("HTTPS_PROXY", "http://127.0.0.1:7890", "User")
+[Environment]::SetEnvironmentVariable("HTTP_PROXY", "http://127.0.0.1:7890", "User")
+```
+
+### 问题 5：onboard 向导无法启动
+
+```powershell
+# 手动启动配置
+openclaw config --wizard
+
+# 或者直接告诉 AI 你的问题
+openclaw
+# 然后输入："帮我检查配置"
 ```
 
 ---
 
 ## 📝 实践示例
 
-### 示例 1：完成安装
+### 示例 1：完成安装和配置
 
 ```powershell
 # 1. 检查 Winget
 winget --version
 
-# 2. 安装 OpenClaw
+# 2. 安装 OpenClaw（管理员权限）
 winget install openclaw
 
-# 3. 验证安装
-openclaw version
+# 3. 运行 onboard 向导
+openclaw onboard
 
-# 4. 启动 OpenClaw
+# 4. 根据向导提示，输入你的 API Key
+
+# 5. 启动 OpenClaw
 openclaw
 
-# 5. 测试对话
+# 6. 测试对话
 你好
 ```
 
-### 示例 2：配置 API Key
+### 示例 2：让 AI 帮你配置百炼 API
 
 ```powershell
-# 1. 创建配置目录
-mkdir $HOME\.openclaw
+# 启动 OpenClaw
+openclaw
 
-# 2. 创建配置文件
-@{
-    api_key = "你的 API Key"
-} | ConvertTo-Json | Out-File -Encoding UTF8 $HOME\.openclaw\config.json
-
-# 3. 验证配置
-cat $HOME\.openclaw\config.json
+# 然后直接说：
+帮我配置百炼 API，我的 Key 是 sk-xxxxxxxx
 ```
 
-### 示例 3：配置渠道
+### 示例 3：让 AI 帮你设置上下文压缩
 
 ```powershell
-# 1. 编辑配置文件
-notepad $HOME\.openclaw\config.json
+# 启动 OpenClaw
+openclaw
 
-# 2. 添加渠道配置（可选）
-
-# 3. 重启 OpenClaw
-openclaw restart
+# 然后直接说：
+帮我开启上下文压缩功能
 ```
 
 ---
 
 ## 💡 实用技巧
 
-### 技巧 1：快速启动
+### 技巧 1：创建桌面快捷方式
 
 ```powershell
 # 创建快捷方式
@@ -285,8 +271,11 @@ $Shortcut.Save()
 ### 技巧 2：查看日志
 
 ```powershell
-# 查看 OpenClaw 日志
+# 查看 OpenClaw 日志（实时）
 Get-Content $HOME\.openclaw\logs\openclaw.log -Tail 50 -Wait
+
+# 或者使用记事本打开
+notepad $HOME\.openclaw\logs\openclaw.log
 ```
 
 ### 技巧 3：更新 OpenClaw
@@ -299,12 +288,21 @@ winget upgrade openclaw
 openclaw version
 ```
 
+### 技巧 4：让 AI 帮你排查问题
+
+```powershell
+# 如果遇到问题，直接问 AI
+openclaw
+# 然后输入："帮我检查配置是否正确"
+```
+
 ---
 
 ## 📚 延伸阅读
 
 - [macOS 安装](./02-install-macos.md) - Mac 用户看这里
-- [会话管理](./04-session-management.md) - 了解会话管理
+- [会话管理](./04-session-management.md) - 学习管理会话
+- [API 配置指南](../03-reference/api-setup.md) - 了解 API 配置详情
 
 ---
 
@@ -313,11 +311,25 @@ openclaw version
 **你学到了**：
 
 - ✅ Windows 系统要求
-- ✅ Winget 安装方法
-- ✅ Scoop 安装方法
-- ✅ 手动安装方法
-- ✅ 配置 API Key
-- ✅ 配置渠道
+- ✅ 使用 Winget 安装 OpenClaw
+- ✅ 使用 Scoop 安装 OpenClaw
+- ✅ 使用 `openclaw onboard` 向导完成配置
+- ✅ **核心理念：让 AI 帮你配置，不要手动改文件**
+- ✅ 常用配置对话示例
 - ✅ 问题排查方法
+
+**核心理念**：
+
+```
+❌ 不要这样做：
+- 手动编辑 config.json
+- 手动修改 .env 文件
+- 查阅文档找配置参数
+
+✅ 应该这样做：
+- 直接告诉 AI："帮我配置百炼 API"
+- 直接告诉 AI："帮我设置上下文压缩"
+- 让 AI 帮你完成所有配置
+```
 
 **下一节**：[会话管理](./04-session-management.md)

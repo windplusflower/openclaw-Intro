@@ -15,7 +15,9 @@
 
 ---
 
-## 🔧 方法一：Homebrew 安装（推荐）
+## 🚀 官方推荐安装方法：Onboard 安装
+
+OpenClaw 提供官方 `onboard` 命令，安装后让 AI 帮你完成所有配置！
 
 ### 步骤 1：安装 Homebrew（如果未安装）
 
@@ -26,9 +28,13 @@ brew --version
 # 如果提示找不到命令，需要安装 Homebrew
 /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
 
-# 安装完成后，添加 Homebrew 到 PATH
+# 安装完成后，添加 Homebrew 到 PATH（M1/M2/M3 Mac）
 echo 'eval "$(/opt/homebrew/bin/brew shellenv)"' >> ~/.zprofile
 eval "$(/opt/homebrew/bin/brew shellenv)"
+
+# 或者 Intel Mac
+echo 'eval "$(/usr/local/bin/brew shellenv)"' >> ~/.zprofile
+eval "$(/usr/local/bin/brew shellenv)"
 ```
 
 ### 步骤 2：安装 OpenClaw
@@ -41,44 +47,70 @@ brew install openclaw
 openclaw version
 ```
 
-### 步骤 3：配置 API Key
+### 步骤 3：运行 Onboard 向导（推荐！）
 
 ```bash
-# 创建配置目录
-mkdir -p ~/.openclaw
-
-# 创建配置文件
-cat > ~/.openclaw/config.json << EOF
-{
-  "api_key": "你的 API Key"
-}
-EOF
-
-# 验证配置
-openclaw version
+# 启动配置向导
+openclaw onboard
 ```
+
+这个向导会：
+- ✅ 检测你的系统环境
+- ✅ 引导你配置 API Key
+- ✅ 测试连接是否正常
+- ✅ 完成基础设置
 
 ---
 
-## 📥 方法二：一键脚本安装
+## 💬 让 AI 帮你完成配置（不要手动改！）
 
-### 运行安装脚本
+安装完成后，**不要手动编辑配置文件**！直接告诉 OpenClaw 你想要什么：
+
+### 示例 1：配置百炼 API
+
+```
+你：帮我配置百炼 API
+AI：好的，请提供你的百炼 API Key（从 https://bailian.console.aliyun.com 获取）
+你：sk-xxxxxxxxxxxxxxxx
+AI：已配置百炼 API，正在测试连接... 连接成功！
+```
+
+### 示例 2：配置上下文压缩
+
+```
+你：帮我设置上下文压缩
+AI：已为你启用上下文压缩功能。当对话超过 4000 tokens 时会自动压缩历史记录。
+```
+
+### 示例 3：配置多个 API
+
+```
+你：我想同时配置 OpenAI 和百炼
+AI：好的，请依次提供两个 API Key...
+```
+
+### 示例 4：配置 Discord 机器人
+
+```
+你：帮我配置 Discord 机器人
+AI：请提供你的 Discord Bot Token...
+```
+
+> 💡 **核心理念**：让 AI 帮你做，不要手动改配置文件！
+
+---
+
+## 📥 备选：一键脚本安装
+
+如果你更喜欢脚本安装：
 
 ```bash
 # 下载安装脚本并执行
 curl -fsSL https://openclaw.ai/install | bash
 
 # 按照提示完成安装
-```
-
-### 验证安装
-
-```bash
-# 检查版本
-openclaw version
-
-# 查看帮助
-openclaw --help
+# 然后运行 onboard 向导
+openclaw onboard
 ```
 
 ---
@@ -108,51 +140,6 @@ openclaw
 
 ---
 
-## ⚙️ 配置渠道
-
-### 配置 Discord（可选）
-
-```bash
-# 编辑配置文件
-nano ~/.openclaw/config.json
-
-# 添加 Discord 配置
-{
-  "api_key": "你的 API Key",
-  "channels": {
-    "discord": {
-      "token": "你的 Discord Bot Token"
-    }
-  }
-}
-
-# 重启 OpenClaw
-openclaw restart
-```
-
-### 配置飞书（可选）
-
-```bash
-# 编辑配置文件
-nano ~/.openclaw/config.json
-
-# 添加飞书配置
-{
-  "api_key": "你的 API Key",
-  "channels": {
-    "feishu": {
-      "app_id": "你的飞书 App ID",
-      "app_secret": "你的飞书 App Secret"
-    }
-  }
-}
-
-# 重启 OpenClaw
-openclaw restart
-```
-
----
-
 ## 🔍 问题排查
 
 ### 问题 1：brew 命令找不到
@@ -168,18 +155,19 @@ openclaw restart
 # 解决方案：检查 PATH
 echo $PATH
 
-# 添加 Homebrew 到 PATH
+# 添加 Homebrew 到 PATH（M1/M2/M3 Mac）
 echo 'eval "$(/opt/homebrew/bin/brew shellenv)"' >> ~/.zprofile
+source ~/.zprofile
+
+# Intel Mac
+echo 'eval "$(/usr/local/bin/brew shellenv)"' >> ~/.zprofile
 source ~/.zprofile
 ```
 
 ### 问题 3：权限错误
 
 ```bash
-# 解决方案：使用 sudo（谨慎）
-sudo brew install openclaw
-
-# 或者修复权限
+# 解决方案：修复权限
 sudo chown -R $(whoami) /opt/homebrew
 ```
 
@@ -194,11 +182,22 @@ export https_proxy=http://127.0.0.1:7890
 export http_proxy=http://127.0.0.1:7890
 ```
 
+### 问题 5：onboard 向导无法启动
+
+```bash
+# 手动启动配置
+openclaw config --wizard
+
+# 或者直接告诉 AI 你的问题
+openclaw
+# 然后输入："帮我检查配置"
+```
+
 ---
 
 ## 📝 实践示例
 
-### 示例 1：完成安装
+### 示例 1：完成安装和配置
 
 ```bash
 # 1. 安装 Homebrew（如果需要）
@@ -207,43 +206,36 @@ brew --version
 # 2. 安装 OpenClaw
 brew install openclaw
 
-# 3. 验证安装
-openclaw version
+# 3. 运行 onboard 向导
+openclaw onboard
 
-# 4. 启动 OpenClaw
+# 4. 根据向导提示，输入你的 API Key
+
+# 5. 启动 OpenClaw
 openclaw
 
-# 5. 测试对话
+# 6. 测试对话
 你好
 ```
 
-### 示例 2：配置 API Key
+### 示例 2：让 AI 帮你配置百炼 API
 
 ```bash
-# 1. 创建配置目录
-mkdir -p ~/.openclaw
+# 启动 OpenClaw
+openclaw
 
-# 2. 创建配置文件
-cat > ~/.openclaw/config.json << EOF
-{
-  "api_key": "你的 API Key"
-}
-EOF
-
-# 3. 验证配置
-cat ~/.openclaw/config.json
+# 然后直接说：
+帮我配置百炼 API，我的 Key 是 sk-xxxxxxxx
 ```
 
-### 示例 3：配置渠道
+### 示例 3：让 AI 帮你设置上下文压缩
 
 ```bash
-# 1. 编辑配置文件
-nano ~/.openclaw/config.json
+# 启动 OpenClaw
+openclaw
 
-# 2. 添加渠道配置（可选）
-
-# 3. 重启 OpenClaw
-openclaw restart
+# 然后直接说：
+帮我开启上下文压缩功能
 ```
 
 ---
@@ -279,12 +271,21 @@ brew upgrade openclaw
 openclaw version
 ```
 
+### 技巧 4：让 AI 帮你排查问题
+
+```bash
+# 如果遇到问题，直接问 AI
+openclaw
+# 然后输入："帮我检查配置是否正确"
+```
+
 ---
 
 ## 📚 延伸阅读
 
 - [Windows 安装](./03-install-windows.md) - Windows 用户看这里
 - [会话管理](./04-session-management.md) - 学习管理会话
+- [API 配置指南](../03-reference/api-setup.md) - 了解 API 配置详情
 
 ---
 
@@ -293,10 +294,24 @@ openclaw version
 **你学到了**：
 
 - ✅ macOS 系统要求
-- ✅ Homebrew 安装方法
-- ✅ 一键脚本安装方法
-- ✅ 配置 API Key
-- ✅ 配置渠道
+- ✅ 使用 Homebrew 安装 OpenClaw
+- ✅ 使用 `openclaw onboard` 向导完成配置
+- ✅ **核心理念：让 AI 帮你配置，不要手动改文件**
+- ✅ 常用配置对话示例
 - ✅ 问题排查方法
+
+**核心理念**：
+
+```
+❌ 不要这样做：
+- 手动编辑 ~/.openclaw/config.json
+- 手动修改 .env 文件
+- 查阅文档找配置参数
+
+✅ 应该这样做：
+- 直接告诉 AI："帮我配置百炼 API"
+- 直接告诉 AI："帮我设置上下文压缩"
+- 让 AI 帮你完成所有配置
+```
 
 **下一节**：[Windows 安装](./03-install-windows.md)
