@@ -48,52 +48,52 @@
 
 ```bash
 # 创建新会话（自动命名）
-opencode session new
+openclaw session new
 
 # 创建并命名会话
-opencode session new --name "project-alpha"
+openclaw session new --name "project-alpha"
 
 # 创建会话并立即进入
-opencode session new --enter
+openclaw session new --enter
 ```
 
 #### Windows (PowerShell)
 
 ```powershell
 # 创建新会话（自动命名）
-opencode session new
+openclaw session new
 
 # 创建并命名会话
-opencode session new --name "project-alpha"
+openclaw session new --name "project-alpha"
 
 # 创建会话并立即进入
-opencode session new --enter
+openclaw session new --enter
 ```
 
 ### 命名会话的最佳实践
 
 ```bash
 # ✅ 好的命名
-opencode session new --name "work-project"
-opencode session new --name "learning-python"
-opencode session new --name "daily-chat"
+openclaw session new --name "work-project"
+openclaw session new --name "learning-python"
+openclaw session new --name "daily-chat"
 
 # ❌ 避免的命名
-opencode session new --name "test"      # 太模糊
-opencode session new --name "123"       # 无意义
-opencode session new --name ""          # 空名称
+openclaw session new --name "test"      # 太模糊
+openclaw session new --name "123"       # 无意义
+openclaw session new --name ""          # 空名称
 ```
 
 ### 双平台命令对照表
 
 | 功能 | macOS / Linux | Windows |
 |------|--------------|---------|
-| 创建会话 | `opencode session new` | `opencode session new` |
+| 创建会话 | `openclaw session new` | `openclaw session new` |
 | 命名会话 | `--name "名称"` | `--name "名称"` |
 | 进入会话 | `--enter` | `--enter` |
 | 快速创建 | `oc sn` | `oc sn` |
 
-> 💡 **提示**：建议设置别名 `alias oc="opencode"` 来简化命令
+> 💡 **提示**：建议设置别名 `alias oc="openclaw"` 来简化命令
 
 ---
 
@@ -105,26 +105,26 @@ opencode session new --name ""          # 空名称
 
 ```bash
 # 查看所有会话
-opencode session list
+openclaw session list
 
 # 查看活跃会话
-opencode session list --active
+openclaw session list --active
 
 # 查看最近使用的会话
-opencode session list --recent
+openclaw session list --recent
 ```
 
 #### Windows (PowerShell)
 
 ```powershell
 # 查看所有会话
-opencode session list
+openclaw session list
 
 # 查看活跃会话
-opencode session list --active
+openclaw session list --active
 
 # 查看最近使用的会话
-opencode session list --recent
+openclaw session list --recent
 ```
 
 **输出示例**：
@@ -142,10 +142,10 @@ opencode session list --recent
 
 ```bash
 # 切换到已存在的会话
-opencode session switch "work-project"
+openclaw session switch "work-project"
 
 # 简写命令
-opencode session use "work-project"
+openclaw session use "work-project"
 
 # 快速切换（设置别名后）
 oc sw "work-project"
@@ -155,10 +155,10 @@ oc sw "work-project"
 
 ```powershell
 # 切换到已存在的会话
-opencode session switch "work-project"
+openclaw session switch "work-project"
 
 # 简写命令
-opencode session use "work-project"
+openclaw session use "work-project"
 
 # 快速切换
 oc sw "work-project"
@@ -170,25 +170,25 @@ oc sw "work-project"
 
 ```bash
 # 查看会话 ID
-opencode session list --verbose
+openclaw session list --verbose
 
 # 通过 ID 切换（更精确）
-opencode session switch "sess_abc123"
+openclaw session switch "sess_abc123"
 ```
 
 #### 技巧 2：模糊匹配
 
 ```bash
 # 支持部分匹配
-opencode session switch "work"    # 匹配 "work-project"
-opencode session switch "python"  # 匹配 "learning-python"
+openclaw session switch "work"    # 匹配 "work-project"
+openclaw session switch "python"  # 匹配 "learning-python"
 ```
 
 #### 技巧 3：快速返回上一个会话
 
 ```bash
 # 返回上次使用的会话
-opencode session prev
+openclaw session prev
 
 # 或简写
 oc sp
@@ -204,26 +204,26 @@ oc sp
 
 ```bash
 # 查看当前会话的所有历史
-opencode history
+openclaw history
 
 # 查看最近 N 条历史
-opencode history --limit 10
+openclaw history --limit 10
 
 # 带时间戳查看
-opencode history --timestamps
+openclaw history --timestamps
 ```
 
 #### Windows (PowerShell)
 
 ```powershell
 # 查看当前会话的所有历史
-opencode history
+openclaw history
 
 # 查看最近 N 条历史
-opencode history --limit 10
+openclaw history --limit 10
 
 # 带时间戳查看
-opencode history --timestamps
+openclaw history --timestamps
 ```
 
 **输出示例**：
@@ -238,13 +238,13 @@ opencode history --timestamps
 
 ```bash
 # 搜索包含关键词的历史
-opencode history search "代码优化"
+openclaw history search "代码优化"
 
 # 在指定会话中搜索
-opencode history search "bug" --session "work-project"
+openclaw history search "bug" --session "work-project"
 
 # 搜索最近 N 天的历史
-opencode history search "错误" --days 7
+openclaw history search "错误" --days 7
 ```
 
 ### 导出历史记录
@@ -253,26 +253,26 @@ opencode history search "错误" --days 7
 
 ```bash
 # 导出当前会话历史到文件
-opencode history export > history.txt
+openclaw history export > history.txt
 
 # 导出为 JSON 格式
-opencode history export --format json > history.json
+openclaw history export --format json > history.json
 
 # 导出指定会话历史
-opencode history export --session "work-project" > work-history.txt
+openclaw history export --session "work-project" > work-history.txt
 ```
 
 #### Windows (PowerShell)
 
 ```powershell
 # 导出当前会话历史到文件
-opencode history export | Out-File -Encoding UTF8 history.txt
+openclaw history export | Out-File -Encoding UTF8 history.txt
 
 # 导出为 JSON 格式
-opencode history export --format json | Out-File -Encoding UTF8 history.json
+openclaw history export --format json | Out-File -Encoding UTF8 history.json
 
 # 导出指定会话历史
-opencode history export --session "work-project" | Out-File -Encoding UTF8 work-history.txt
+openclaw history export --session "work-project" | Out-File -Encoding UTF8 work-history.txt
 ```
 
 ---
@@ -320,27 +320,27 @@ opencode history export --session "work-project" | Out-File -Encoding UTF8 work-
 
 ```bash
 # 每 20-30 轮对话创建新会话
-opencode session new --name "project-phase-2"
+openclaw session new --name "project-phase-2"
 ```
 
 #### 方法 2：清理当前会话历史
 
 ```bash
 # 清理最近的 N 条消息
-opencode history trim --keep 20
+openclaw history trim --keep 20
 
 # 清理所有历史（保留会话）
-opencode history clear --confirm
+openclaw history clear --confirm
 ```
 
 #### 方法 3：使用摘要功能
 
 ```bash
 # 生成当前会话摘要
-opencode session summarize
+openclaw session summarize
 
 # 基于摘要开启新会话
-opencode session new --context "summary.txt"
+openclaw session new --context "summary.txt"
 ```
 
 ---
@@ -353,26 +353,26 @@ opencode session new --context "summary.txt"
 
 ```bash
 # 删除指定会话
-opencode session delete "old-project"
+openclaw session delete "old-project"
 
 # 强制删除（不确认）
-opencode session delete "old-project" --force
+openclaw session delete "old-project" --force
 
 # 删除并导出历史
-opencode session delete "old-project" --export
+openclaw session delete "old-project" --export
 ```
 
 #### Windows (PowerShell)
 
 ```powershell
 # 删除指定会话
-opencode session delete "old-project"
+openclaw session delete "old-project"
 
 # 强制删除（不确认）
-opencode session delete "old-project" --force
+openclaw session delete "old-project" --force
 
 # 删除并导出历史
-opencode session delete "old-project" --export
+openclaw session delete "old-project" --export
 ```
 
 > ⚠️ **警告**：删除后会话无法恢复，建议先导出历史！
@@ -381,13 +381,13 @@ opencode session delete "old-project" --export
 
 ```bash
 # 清理所有非活跃会话
-opencode session cleanup
+openclaw session cleanup
 
 # 清理超过 N 天未使用的会话
-opencode session cleanup --older-than 30
+openclaw session cleanup --older-than 30
 
 # 保留最近 N 个会话，清理其余
-opencode session cleanup --keep-recent 5
+openclaw session cleanup --keep-recent 5
 ```
 
 ### 自动清理配置
@@ -427,21 +427,21 @@ notepad $env:USERPROFILE\.openclaw\config.json
 
 ```bash
 # 步骤 1：创建三个会话
-opencode session new --name "work"
-opencode session new --name "study"
-opencode session new --name "chat"
+openclaw session new --name "work"
+openclaw session new --name "study"
+openclaw session new --name "chat"
 
 # 步骤 2：查看会话列表
-opencode session list
+openclaw session list
 
 # 步骤 3：切换到 work 会话
-opencode session switch "work"
+openclaw session switch "work"
 
 # 步骤 4：验证当前会话
-opencode session info
+openclaw session info
 
 # 步骤 5：返回上一个会话
-opencode session prev
+openclaw session prev
 ```
 
 ### 示例 2：管理多个项目
@@ -450,38 +450,38 @@ opencode session prev
 # 场景：同时处理两个项目
 
 # 项目 A：网站开发
-opencode session new --name "website-dev"
+openclaw session new --name "website-dev"
 # ... 进行网站开发对话 ...
-opencode history export > website-notes.txt
+openclaw history export > website-notes.txt
 
 # 切换到项目 B：数据分析
-opencode session switch "data-analysis"
+openclaw session switch "data-analysis"
 # 或
-opencode session new --name "data-analysis"
+openclaw session new --name "data-analysis"
 
 # ... 进行数据分析对话 ...
 
 # 快速切换回项目 A
-opencode session switch "website-dev"
+openclaw session switch "website-dev"
 ```
 
 ### 示例 3：清理旧会话
 
 ```bash
 # 步骤 1：查看所有会话
-opencode session list
+openclaw session list
 
 # 步骤 2：导出重要会话历史
-opencode history export --session "old-project" > backup.txt
+openclaw history export --session "old-project" > backup.txt
 
 # 步骤 3：删除不再需要的会话
-opencode session delete "test-session"
+openclaw session delete "test-session"
 
 # 步骤 4：运行自动清理
-opencode session cleanup --older-than 7
+openclaw session cleanup --older-than 7
 
 # 步骤 5：确认清理结果
-opencode session list
+openclaw session list
 ```
 
 ---
@@ -504,10 +504,10 @@ ls -la ~/.openclaw/sessions/
 ls -la ~/.openclaw/backups/
 
 # 3. 从导出文件恢复
-opencode session restore --from "backup.txt"
+openclaw session restore --from "backup.txt"
 
 # 4. 联系支持
-opencode support --issue "session-lost"
+openclaw support --issue "session-lost"
 ```
 
 **预防措施**：
@@ -524,7 +524,7 @@ opencode support --issue "session-lost"
 cp -r ~/.openclaw/sessions/ ~/backups/sessions-$(date +%Y%m%d)/
 
 # 备份单个会话
-opencode history export --session "important" > ~/backups/important-session.txt
+openclaw history export --session "important" > ~/backups/important-session.txt
 
 # 使用脚本自动备份
 cat > backup-sessions.sh << EOF
@@ -545,7 +545,7 @@ chmod +x backup-sessions.sh
 Copy-Item -Path "$env:USERPROFILE\.openclaw\sessions" -Destination "$env:USERPROFILE\backups\sessions-$(Get-Date -Format 'yyyyMMdd')" -Recurse
 
 # 备份单个会话
-opencode history export --session "important" | Out-File -Encoding UTF8 "$env:USERPROFILE\backups\important-session.txt"
+openclaw history export --session "important" | Out-File -Encoding UTF8 "$env:USERPROFILE\backups\important-session.txt"
 ```
 
 ### Q3: 会话有数量限制吗？

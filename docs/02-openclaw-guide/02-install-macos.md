@@ -35,10 +35,10 @@ eval "$(/opt/homebrew/bin/brew shellenv)"
 
 ```bash
 # 安装 OpenClaw
-brew install opencode
+brew install openclaw
 
 # 验证安装
-opencode version
+openclaw version
 ```
 
 ### 步骤 3：配置 API Key
@@ -55,7 +55,7 @@ cat > ~/.openclaw/config.json << EOF
 EOF
 
 # 验证配置
-opencode version
+openclaw version
 ```
 
 ---
@@ -66,7 +66,7 @@ opencode version
 
 ```bash
 # 下载安装脚本并执行
-curl -fsSL https://opencode.ai/install | bash
+curl -fsSL https://openclaw.ai/install | bash
 
 # 按照提示完成安装
 ```
@@ -75,10 +75,10 @@ curl -fsSL https://opencode.ai/install | bash
 
 ```bash
 # 检查版本
-opencode version
+openclaw version
 
 # 查看帮助
-opencode --help
+openclaw --help
 ```
 
 ---
@@ -89,7 +89,7 @@ opencode --help
 
 ```bash
 # 启动 OpenClaw
-opencode
+openclaw
 
 # 你应该看到类似输出：
 # 🦞 OpenClaw 已启动
@@ -127,7 +127,7 @@ nano ~/.openclaw/config.json
 }
 
 # 重启 OpenClaw
-opencode restart
+openclaw restart
 ```
 
 ### 配置飞书（可选）
@@ -148,7 +148,7 @@ nano ~/.openclaw/config.json
 }
 
 # 重启 OpenClaw
-opencode restart
+openclaw restart
 ```
 
 ---
@@ -162,7 +162,7 @@ opencode restart
 /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
 ```
 
-### 问题 2：opencode 命令找不到
+### 问题 2：openclaw 命令找不到
 
 ```bash
 # 解决方案：检查 PATH
@@ -177,7 +177,7 @@ source ~/.zprofile
 
 ```bash
 # 解决方案：使用 sudo（谨慎）
-sudo brew install opencode
+sudo brew install openclaw
 
 # 或者修复权限
 sudo chown -R $(whoami) /opt/homebrew
@@ -205,13 +205,13 @@ export http_proxy=http://127.0.0.1:7890
 brew --version
 
 # 2. 安装 OpenClaw
-brew install opencode
+brew install openclaw
 
 # 3. 验证安装
-opencode version
+openclaw version
 
 # 4. 启动 OpenClaw
-opencode
+openclaw
 
 # 5. 测试对话
 你好
@@ -243,7 +243,7 @@ nano ~/.openclaw/config.json
 # 2. 添加渠道配置（可选）
 
 # 3. 重启 OpenClaw
-opencode restart
+openclaw restart
 ```
 
 ---
@@ -254,7 +254,7 @@ opencode restart
 
 ```bash
 # 添加别名到 ~/.zshrc
-echo 'alias oc="opencode"' >> ~/.zshrc
+echo 'alias oc="openclaw"' >> ~/.zshrc
 source ~/.zshrc
 
 # 现在可以用 oc 命令快速启动
@@ -273,10 +273,10 @@ tail -f ~/.openclaw/logs/openclaw.log
 ```bash
 # 更新 OpenClaw
 brew update
-brew upgrade opencode
+brew upgrade openclaw
 
 # 查看版本
-opencode version
+openclaw version
 ```
 
 ---

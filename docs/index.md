@@ -11,7 +11,7 @@
 | 部分 | 主题 | 内容说明 |
 |------|------|----------|
 | [第一部分](01-ai-intro/) | AI 入门 | 理解 AI 工作原理，了解终端基础 |
-| [第二部分](02-opencode-guide/) | OpenClaw 指南 | 了解 OpenClaw 安装、配置和使用 |
+| [第二部分](02-openclaw-guide/) | OpenClaw 指南 | 了解 OpenClaw 安装、配置和使用 |
 
 ---
 
@@ -63,7 +63,7 @@
 ## 📝 配套材料
 
 1. [终端速查手册](03-reference/command-cheatsheet.md) - Mac/Windows 命令对照表
-2. [安装指南](02-opencode-guide/) - Mac/Windows 图文步骤
+2. [安装指南](02-openclaw-guide/) - Mac/Windows 图文步骤
 3. [配置文件位置速查](03-reference/config-locations.md) - 双平台路径对照
 4. [常见问题 FAQ](03-reference/faq.md) - Mac/Windows 分别说明
 5. [问题排查](03-reference/troubleshooting.md) - 常见错误和解决方法

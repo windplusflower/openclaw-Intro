@@ -8,7 +8,7 @@
 
 | 小节 | 主题 | 内容说明 |
 |------|------|----------|
-| [2.1](01-what-is-opencode.md) | OpenClaw 是什么 | 了解 OpenClaw 的功能和用途 |
+| [2.1](01-what-is-openclaw.md) | OpenClaw 是什么 | 了解 OpenClaw 的功能和用途 |
 | [2.2](02-install-macos.md) | macOS 安装 | 在 Mac 上安装 OpenClaw |
 | [2.3](03-install-windows.md) | Windows 安装 | 在 Windows 上安装 OpenClaw |
 | [2.4](04-session-management.md) | 会话管理 | 了解如何管理多个会话 |
@@ -55,4 +55,4 @@
 
 ## 🚀 开始阅读
 
-从 [2.1 OpenClaw 是什么](01-what-is-opencode.md) 开始！
+从 [2.1 OpenClaw 是什么](01-what-is-openclaw.md) 开始！

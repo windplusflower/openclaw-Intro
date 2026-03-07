@@ -32,10 +32,10 @@ winget --version
 
 ```powershell
 # 安装 OpenClaw
-winget install opencode
+winget install openclaw
 
 # 验证安装
-opencode version
+openclaw version
 ```
 
 ### 步骤 3：配置 API Key
@@ -72,10 +72,10 @@ scoop --version
 
 ```powershell
 # 安装 OpenClaw
-scoop install opencode
+scoop install openclaw
 
 # 验证安装
-opencode version
+openclaw version
 ```
 
 ---
@@ -86,10 +86,10 @@ opencode version
 
 ```powershell
 # 访问 GitHub Releases
-# https://github.com/opencode-ai/opencode/releases
+# https://github.com/openclaw-ai/openclaw/releases
 
 # 下载最新的 Windows 安装包
-# 通常是 opencode-windows-x64.zip
+# 通常是 openclaw-windows-x64.zip
 ```
 
 ### 步骤 2：解压并配置
@@ -115,7 +115,7 @@ mkdir $HOME\.openclaw
 
 ```powershell
 # 启动 OpenClaw
-opencode
+openclaw
 
 # 你应该看到类似输出：
 # 🦞 OpenClaw 已启动
@@ -153,7 +153,7 @@ notepad $HOME\.openclaw\config.json
 }
 
 # 重启 OpenClaw
-opencode restart
+openclaw restart
 ```
 
 ### 配置飞书（可选）
@@ -174,7 +174,7 @@ notepad $HOME\.openclaw\config.json
 }
 
 # 重启 OpenClaw
-opencode restart
+openclaw restart
 ```
 
 ---
@@ -190,7 +190,7 @@ opencode restart
 # 3. 点击安装
 ```
 
-### 问题 2：opencode 命令找不到
+### 问题 2：openclaw 命令找不到
 
 ```powershell
 # 解决方案：检查 PATH
@@ -229,13 +229,13 @@ $env:HTTP_PROXY="http://127.0.0.1:7890"
 winget --version
 
 # 2. 安装 OpenClaw
-winget install opencode
+winget install openclaw
 
 # 3. 验证安装
-opencode version
+openclaw version
 
 # 4. 启动 OpenClaw
-opencode
+openclaw
 
 # 5. 测试对话
 你好
@@ -265,7 +265,7 @@ notepad $HOME\.openclaw\config.json
 # 2. 添加渠道配置（可选）
 
 # 3. 重启 OpenClaw
-opencode restart
+openclaw restart
 ```
 
 ---
@@ -278,7 +278,7 @@ opencode restart
 # 创建快捷方式
 $WshShell = New-Object -comObject WScript.Shell
 $Shortcut = $WshShell.CreateShortcut("$Home\Desktop\OpenClaw.lnk")
-$Shortcut.TargetPath = "C:\Program Files\OpenClaw\opencode.exe"
+$Shortcut.TargetPath = "C:\Program Files\OpenClaw\openclaw.exe"
 $Shortcut.Save()
 ```
 
@@ -293,10 +293,10 @@ Get-Content $HOME\.openclaw\logs\openclaw.log -Tail 50 -Wait
 
 ```powershell
 # 更新 OpenClaw
-winget upgrade opencode
+winget upgrade openclaw
 
 # 查看版本
-opencode version
+openclaw version
 ```
 
 ---
