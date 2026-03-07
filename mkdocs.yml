@@ -8,6 +8,7 @@ theme:
   name: material
   language: zh
   features:
+    - navigation.tabs
     - navigation.expand
     - navigation.indexes
     - navigation.sections
