@@ -8,6 +8,7 @@
 
 | 小节 | 主题 | 内容说明 |
 |------|------|----------|
+| [1.0](00-core-concepts.md) | **核心概念扫盲** | MCP、Agent、OpenClaw、Skill 是什么 |
 | [1.1](01-how-ai-works.md) | AI 如何工作 | 理解大模型如何"思考" |
 | [1.2](02-token-concept.md) | Token 概念 | 理解 Token 和计费方式 |
 | [1.3](03-ai-hallucination.md) | AI 为什么会胡说 | 理解 AI 幻觉和验证方法 |
