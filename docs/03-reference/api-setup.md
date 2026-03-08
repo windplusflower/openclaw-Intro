@@ -50,58 +50,27 @@ OpenClaw 支持多种主流 AI 服务商，你可以根据需求选择：
 
 ### 第二步：配置到 OpenClaw
 
-OpenClaw 支持多种配置方式，选择最适合你的一种：
+**🤖 让 AI 帮你配置（推荐）**
 
-#### 方式一：环境变量（推荐）
+获取 API Key 后，**不需要手动修改任何配置文件**！直接告诉你的 AI 助手：
 
-在终端执行以下命令：
+> "我刚拿到了 OpenAI 的 API Key，帮我配置一下"
 
-```bash
-# 临时设置（当前会话有效）
-export OPENAI_API_KEY="sk-your-api-key-here"
+然后粘贴你的 API Key，AI 会自动帮你完成所有配置。
 
-# 永久设置（添加到 ~/.bashrc 或 ~/.zshrc）
-echo 'export OPENAI_API_KEY="sk-your-api-key-here"' >> ~/.bashrc
-source ~/.bashrc
-```
-
-#### 方式二：配置文件
-
-在 OpenClaw 工作区创建或编辑配置文件：
-
-```bash
-# 编辑配置
-nano ~/.openclaw/workspace/.env
-```
-
-添加以下内容：
-
-```env
-OPENAI_API_KEY=sk-your-api-key-here
-OPENAI_MODEL=gpt-4-turbo
-```
-
-#### 方式三：命令行参数
-
-启动时直接指定：
-
-```bash
-openclaw start --api-key sk-your-api-key-here --model gpt-4-turbo
-```
+**为什么让 AI 配置更好？**
+- ✅ 自动选择最适合的配置方式
+- ✅ 避免手动编辑配置文件出错
+- ✅ 自动测试连接，确认配置正确
+- ✅ 如果遇到问题，AI 会帮你排查
 
 ### 第三步：测试连接
 
-配置完成后，运行以下命令验证：
+配置完成后，**让 AI 自动测试**：
 
-```bash
-# 简单测试
-openclaw test-connection
+> "帮我测试一下 OpenAI 的连接是否正常"
 
-# 或发送测试消息
-openclaw send "你好，请回复一个表情符号"
-```
-
-如果看到正常回复，说明配置成功！
+AI 会自动发送测试请求并告诉你结果。如果配置有问题，AI 会帮你排查并修复。
 
 ### 常见问题
 
@@ -126,21 +95,13 @@ openclaw send "你好，请回复一个表情符号"
 
 ### 配置方法
 
-```bash
-# 环境变量
-export ANTHROPIC_API_KEY="sk-ant-your-key-here"
-export ANTHROPIC_MODEL="claude-sonnet-4"
+**🤖 让 AI 帮你配置**
 
-# 或写入配置文件
-echo 'ANTHROPIC_API_KEY=sk-ant-your-key-here' >> ~/.openclaw/workspace/.env
-echo 'ANTHROPIC_MODEL=claude-sonnet-4' >> ~/.openclaw/workspace/.env
-```
+获取 API Key 后，直接告诉你的 AI 助手：
 
-### 测试连接
+> "帮我配置 Anthropic 的 API，Key 是：sk-ant-xxx"
 
-```bash
-openclaw test-connection --provider anthropic
-```
+AI 会自动完成配置并测试连接。
 
 ### 注意事项
 
@@ -161,19 +122,15 @@ openclaw test-connection --provider anthropic
 
 #### 配置
 
-```bash
-# 环境变量
-export BAIDU_API_KEY="your-api-key"
-export BAIDU_SECRET_KEY="your-secret-key"
-export BAIDU_MODEL="ernie-4.0-turbo"
+**🤖 让 AI 帮你配置**
 
-# 配置文件
-cat >> ~/.openclaw/workspace/.env << EOF
-BAIDU_API_KEY=your-api-key
-BAIDU_SECRET_KEY=your-secret-key
-BAIDU_MODEL=ernie-4.0-turbo
-EOF
-```
+获取凭证后，直接告诉 AI：
+
+> "帮我配置百度千帆的 API，API Key 是 xxx，Secret Key 是 xxx"
+
+AI 会自动完成配置并测试连接。
+
+---
 
 ### 阿里通义（Qwen）
 
@@ -185,17 +142,13 @@ EOF
 
 #### 配置
 
-```bash
-# 环境变量
-export DASHSCOPE_API_KEY="sk-your-dashscope-key"
-export DASHSCOPE_MODEL="qwen-max"
+**🤖 让 AI 帮你配置**
 
-# 配置文件
-cat >> ~/.openclaw/workspace/.env << EOF
-DASHSCOPE_API_KEY=sk-your-dashscope-key
-DASHSCOPE_MODEL=qwen-max
-EOF
-```
+获取 API Key 后，直接告诉 AI：
+
+> "帮我配置阿里云百炼的 API，Key 是 sk-xxx"
+
+AI 会自动完成配置并测试连接。
 
 ### 国内服务商优势
 
@@ -210,52 +163,30 @@ EOF
 
 OpenClaw 支持同时配置多个 API，实现智能切换和负载均衡。
 
-### 配置示例
+### 🤖 让 AI 帮你配置多 API
 
-创建高级配置文件 `~/.openclaw/workspace/.env.multi`：
+**不需要手动创建配置文件！** 直接告诉 AI：
 
-```env
-# 主 API（默认使用）
-PRIMARY_PROVIDER=openai
-OPENAI_API_KEY=sk-primary-key
-OPENAI_MODEL=gpt-4-turbo
+> "我想配置多个 API，根据任务类型自动切换。我有 OpenAI、Anthropic 和阿里云百炼的 Key"
 
-# 备用 API
-FALLBACK_PROVIDER=anthropic
-ANTHROPIC_API_KEY=sk-ant-fallback-key
-ANTHROPIC_MODEL=claude-sonnet-4
-
-# 国内 API（用于简单任务节省成本）
-DOMESTIC_PROVIDER=baidu
-BAIDU_API_KEY=baidu-key
-BAIDU_SECRET_KEY=baidu-secret
-BAIDU_MODEL=ernie-4.0-turbo
-
-# 路由规则
-# simple: 使用国内 API
-# complex: 使用主 API
-# creative: 使用备用 API
-ROUTING_ENABLED=true
-```
+然后依次提供你的 API Key，AI 会：
+- ✅ 自动配置所有 API
+- ✅ 设置智能路由规则
+- ✅ 根据任务类型自动选择最合适的 API
+- ✅ 测试所有连接确保正常
 
 ### 使用场景
 
 | 任务类型 | 推荐 API | 原因 |
 |----------|----------|------|
-| 日常问答 | 百度文心 | 成本低，响应快 |
+| 日常问答 | 百度文心 / 阿里云百炼 | 成本低，响应快 |
 | 代码生成 | OpenAI / 通义 | 代码能力强 |
 | 长文档分析 | Anthropic | 上下文窗口大 |
 | 创意写作 | Anthropic / OpenAI | 表达更自然 |
 
-### 自动切换
+### 智能路由
 
-启用智能路由后，OpenClaw 会根据任务复杂度自动选择：
-
-```bash
-# 启用路由
-openclaw config set routing.enabled true
-openclaw config set routing.strategy auto
-```
+配置完成后，OpenClaw 会根据任务复杂度自动选择最合适的 API，无需手动切换。
 
 ---
 
@@ -331,16 +262,16 @@ openclaw config set routing.strategy auto
 
 1. **选择服务商**：根据需求选择国际或国内服务商
 2. **获取密钥**：在对应平台创建并复制 API Key
-3. **配置方式**：推荐环境变量或配置文件
-4. **测试验证**：使用 `test-connection` 确认配置正确
-5. **多 API 策略**：可配置多个 API 实现成本优化
+3. **配置方式**：**让 AI 帮你配置**（最简单、最安全）
+4. **测试验证**：AI 会自动测试连接并告诉你结果
+5. **多 API 策略**：告诉 AI 你有多个 Key，它会自动设置智能路由
 
 ### 📋 快速检查清单
 
 - [ ] 已选择适合的 AI 服务商
 - [ ] 已获取 API Key 并安全保存
-- [ ] 已配置环境变量或配置文件
-- [ ] 已通过连接测试
+- [ ] **已让 AI 帮忙完成配置**
+- [ ] AI 已确认连接正常
 - [ ] 了解各服务商的价格差异
 
 ### 🚀 下一步
