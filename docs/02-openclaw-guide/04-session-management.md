@@ -294,7 +294,7 @@ openclaw history export --session "work-project" | Out-File -Encoding UTF8 work-
 
 | 模型 | 上下文窗口 | 约等于文字 | 官网来源 |
 |------|-----------|-----------|----------|
-| **qwen3.5-plus** | 256K tokens | ~200,000 汉字 | [阿里云百炼](https://help.aliyun.com/zh/model-studio/model-pricing) |
+| **qwen3.5-plus** | 1M tokens | ~800,000 汉字 | [阿里云百炼](https://help.aliyun.com/zh/model-studio/model-pricing) |
 | **GPT-5.4** | 1.05M tokens (922K+128K) | ~800,000 汉字 | [OpenRouter](https://openrouter.ai/openai) |
 | **Claude Opus 4.6** | 1M tokens | ~800,000 汉字 | [Anthropic](https://www.anthropic.com/claude/opus) |
 | **Claude Sonnet 4.6** | 1M tokens | ~800,000 汉字 | [Anthropic](https://www.anthropic.com/claude/opus) |

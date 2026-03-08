@@ -208,7 +208,7 @@ OpenClaw 需要配置 AI 服务的 API Key：
 
 | 模型 | 输入价格 | 输出价格 | 上下文窗口 | 官网来源 |
 |------|---------|---------|------------|----------|
-| **qwen3.5-plus** | ¥0.80 | ¥4.80 | 256K | [阿里云百炼](https://help.aliyun.com/zh/model-studio/model-pricing) |
+| **qwen3.5-plus** | ¥0.80 | ¥4.80 | 1M | [阿里云百炼](https://help.aliyun.com/zh/model-studio/model-pricing) |
 | **MiniMax-M2.5** | ¥2.10 | ¥8.40 | 196.6K | [阿里云百炼](https://help.aliyun.com/zh/model-studio/model-pricing) |
 | **kimi-k2.5** | ¥4.00 | ¥21.00 | 256K | [阿里云百炼](https://help.aliyun.com/zh/model-studio/model-pricing) |
 | **glm-5** | ¥4.00 | ¥18.00 | 202.8K | [阿里云百炼](https://help.aliyun.com/zh/model-studio/model-pricing) |

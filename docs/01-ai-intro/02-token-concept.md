@@ -90,7 +90,7 @@ AI 服务按 Token 数量收费：
 
 | 模型 | 上下文窗口 | 输入价格 | 输出价格 | 折合美元 |
 |------|------------|----------|----------|----------|
-| **qwen3.5-plus** | 256K | ¥0.80/1M | ¥4.80/1M | $0.11/$0.67 |
+| **qwen3.5-plus** | 1M | ¥0.80/1M | ¥4.80/1M | $0.11/$0.67 |
 | **kimi-k2.5** | 256K | ¥4.00/1M | ¥21.00/1M | $0.55/$2.92 |
 | **glm-5** | 202.8K | ¥4.00/1M | ¥18.00/1M | $0.55/$2.50 |
 | **MiniMax-M2.5** | 196.6K | ¥2.10/1M | ¥8.40/1M | $0.29/$1.17 |
@@ -99,7 +99,7 @@ AI 服务按 Token 数量收费：
 
 | 模型 | 上下文窗口 | 输入价格 | 输出价格 | 折合美元 |
 |------|------------|----------|----------|----------|
-| **qwen3.5-plus** | 256K | ¥2.936/1M | ¥17.614/1M | $0.41/$2.45 |
+| **qwen3.5-plus** | 1M | ¥2.936/1M | ¥17.614/1M | $0.41/$2.45 |
 | **kimi-k2.5** | 256K | ¥4.00/1M | ¥21.00/1M | $0.55/$2.92 |
 | **glm-5** | 202.8K | ¥4.00/1M | ¥18.00/1M | $0.55/$2.50 |
 | **MiniMax-M2.5** | 196.6K | ¥2.10/1M | ¥8.40/1M | $0.29/$1.17 |
@@ -315,7 +315,7 @@ AI 每次能处理的 Token 数量有限制：
 | **Claude Opus 4.6** | 1M | 约 80 万字的小说 | [Anthropic](https://www.anthropic.com/claude/opus) |
 | **Claude Sonnet 4.6** | 1M | 约 80 万字的小说 | [Anthropic](https://www.anthropic.com/claude/opus) |
 | **Gemini 3.1 Pro** | 1M | 约 80 万字的小说 | [Google AI](https://ai.google.dev/gemini-api/docs/pricing) |
-| **qwen3.5-plus** | 256K | 约 20 万字的小说 | [阿里云百炼](https://help.aliyun.com/zh/model-studio/model-pricing) |
+| **qwen3.5-plus** | 1M | 约 80 万字的小说 | [阿里云百炼](https://help.aliyun.com/zh/model-studio/model-pricing) |
 | **kimi-k2.5** | 256K | 约 20 万字的小说 | [Moonshot](https://platform.moonshot.ai/docs/pricing/chat) |
 | **glm-5** | 202.8K | 约 15 万字的小说 | [Z.ai](https://docs.z.ai/guides/overview/pricing) |
 | **MiniMax-M2.5** | 196.6K | 约 15 万字的小说 | [MiniMax](https://platform.minimax.io/docs/guides/pricing-paygo) |
