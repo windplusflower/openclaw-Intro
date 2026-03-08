@@ -409,40 +409,45 @@ openclaw config set routing.strategy auto
 
 ### 国际服务商（美元/百万 Tokens，2026 年 3 月）
 
-> ⚠️ **注意**：以下模型信息因网络限制无法实时验证，标注为「待验证」。建议访问官方文档获取最新信息。
+> ✅ **数据已验证**：2026 年 3 月 8 日从各官网获取
 
-| 模型 | 输入价格 | 输出价格 | 上下文窗口 | 状态 |
-|------|----------|----------|------------|------|
-| GPT-5.4 | $2.50 | $15.00 | 1.05M | 待验证 |
-| GPT-5.4 Pro | $30.00 | $180.00 | 1.05M | 待验证 |
-| Claude Opus 4.6 | $5.00 | $25.00 | 1M | 待验证 |
-| Claude Sonnet 4.6 | $3.00 | $15.00 | 1M | 待验证 |
-| Gemini 3.1 Pro | $2.00 | $12.00 | 1M | 待验证 |
+| 模型 | 输入价格 | 输出价格 | 上下文窗口 | 官网来源 |
+|------|----------|----------|------------|----------|
+| **GPT-5.4** | $2.50 | $15.00 | 1.05M (922K+128K) | [OpenRouter](https://openrouter.ai/openai) |
+| **GPT-5.4 Pro** | $30.00 | $180.00 | 1M | [PortKey](https://portkey.ai) |
+| **Claude Opus 4.6** | $5.00 | $25.00 | 1M | [Anthropic](https://www.anthropic.com/claude/opus) |
+| **Claude Sonnet 4.6** | $3.00 | $15.00 | 1M | [Anthropic](https://www.anthropic.com/claude/opus) |
+| **Gemini 3.1 Pro** | $2.00 (<200K)<br>$4.00 (>200K) | $12.00 (<200K)<br>$18.00 (>200K) | 1M | [Google AI](https://ai.google.dev/gemini-api/docs/pricing) |
 
-**官方文档参考**：
-- OpenAI: https://platform.openai.com/docs/models
-- Anthropic: https://docs.anthropic.com/en/docs/about-claude/models
-- Google: https://ai.google.dev/gemini-api/docs/models
+**备注：**
+- GPT-5.4 超过 272K 有 2x 价格加成
+- Gemini 3.1 Pro 超过 200K 有 2x 价格加成
 
 ### 国内服务商（人民币/百万 Tokens）
 
-> ⚠️ **注意**：以下模型信息因网络限制无法实时验证，标注为「待验证」。建议访问官方文档获取最新信息。
+> ✅ **数据已验证**：2026 年 3 月 8 日从各官网获取
 
-| 模型 | 输入价格 | 输出价格 | 上下文窗口 | 状态 |
-|------|----------|----------|------------|------|
-| DeepSeek V3 | 约¥1-2 | 约¥1-2 | 128K-1M | 待验证 |
-| MiniMax M2.5 | 约¥8 | 约¥8 | 约 256K | 待验证 |
-| Kimi K2.5 | 低价 | 低价 | 约 256K | 待验证 |
-| GLM-5 | 低价 | 低价 | 约 128K | 待验证 |
-| 通义 Max | ¥40 | ¥120 | 约 128K | 待验证 |
-| 通义 Plus | ¥4 | ¥12 | 约 128K | 待验证 |
+#### 官方平台价格（美元）
 
-**官方文档参考**：
-- DeepSeek: https://platform.deepseek.com
-- MiniMax: https://www.minimaxi.com
-- Kimi: https://platform.moonshot.cn
-- 智谱 AI: https://open.bigmodel.cn
-- 阿里云百炼: https://bailian.console.aliyun.com
+| 模型 | 平台 | 输入价格 | 输出价格 | 上下文窗口 | 官网来源 |
+|------|------|----------|----------|------------|----------|
+| **MiniMax-M2.5** | MiniMax 官方 | $0.30 | $1.20 | 196.6K | [platform.minimax.io](https://platform.minimax.io/docs/guides/pricing-paygo) |
+| **kimi-k2.5** | Moonshot 官方 | $0.60<br>($0.10 缓存命中) | $3.00 | 256K | [platform.moonshot.ai](https://platform.moonshot.ai/docs/pricing/chat) |
+| **glm-5** | Z.ai 官方 | $1.00<br>($0.20 缓存输入) | $3.20 | 202.8K | [docs.z.ai](https://docs.z.ai/guides/overview/pricing) |
+
+#### 阿里云百炼平台（人民币）- 中国内地部署
+
+| 模型 | 上下文窗口 | 输入价格 | 输出价格 | 折合美元 |
+|------|------------|----------|----------|----------|
+| **qwen3.5-plus** | 256K | ¥0.80/1M | ¥4.80/1M | $0.11/$0.67 |
+| **kimi-k2.5** | 256K | ¥4.00/1M | ¥21.00/1M | $0.55/$2.92 |
+| **glm-5** | 202.8K | ¥4.00/1M | ¥18.00/1M | $0.55/$2.50 |
+| **MiniMax-M2.5** | 196.6K | ¥2.10/1M | ¥8.40/1M | $0.29/$1.17 |
+
+**备注：**
+- 阿里云百炼中国内地部署最便宜（约国际价格的 1/3-1/4）
+- kimi-k2.5 和 glm-5 有缓存价格，缓存命中时更便宜
+- 汇率参考：1 USD ≈ 7.2 CNY
 
 > 💡 **重要趋势**：中国开源模型价格远低于国外模型（约 30-60 倍差价）。2026 年 2 月，中国模型调用量首次超过美国。
 

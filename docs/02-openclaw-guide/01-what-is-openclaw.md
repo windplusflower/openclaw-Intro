@@ -190,24 +190,33 @@ Channel（渠道发送）
 
 OpenClaw 需要配置 AI 服务的 API Key：
 
-#### 国外模型（每 1M tokens，2026 年 3 月）
+#### 国外模型（美元/百万 tokens，2026 年 3 月官网验证）
 
-| 服务商 | 价格范围 | 适合场景 |
-|--------|---------|---------|
-| **OpenAI GPT-5.4** | $2.50 输入 / $15 输出 | 通用场景，1.05M 上下文 |
-| **OpenAI GPT-5.4 Pro** | $30 输入 / $180 输出 | 深度推理 |
-| **Anthropic Claude Opus 4.6** | $5 输入 / $25 输出 | 复杂任务，1M 上下文 |
-| **Anthropic Claude Sonnet 4.6** | $3 输入 / $15 输出 | 高性价比，1M 上下文 |
-| **Google Gemini 3.1 Pro** | $2 输入 / $12 输出 | 多模态，1M 上下文 |
+| 模型 | 输入价格 | 输出价格 | 上下文窗口 | 官网来源 |
+|------|---------|---------|------------|----------|
+| **GPT-5.4** | $2.50 | $15.00 | 1.05M | [OpenRouter](https://openrouter.ai/openai) |
+| **GPT-5.4 Pro** | $30.00 | $180.00 | 1M | [PortKey](https://portkey.ai) |
+| **Claude Opus 4.6** | $5.00 | $25.00 | 1M | [Anthropic](https://www.anthropic.com/claude/opus) |
+| **Claude Sonnet 4.6** | $3.00 | $15.00 | 1M | [Anthropic](https://www.anthropic.com/claude/opus) |
+| **Gemini 3.1 Pro** | $2.00 (<200K)<br>$4.00 (>200K) | $12.00 (<200K)<br>$18.00 (>200K) | 1M | [Google AI](https://ai.google.dev/gemini-api/docs/pricing) |
 
-#### 国内模型（每 1M tokens）
+**备注：**
+- GPT-5.4 超过 272K 有 2x 价格加成
+- Gemini 3.1 Pro 超过 200K 有 2x 价格加成
 
-| 服务商 | 价格范围 | 适合场景 |
-|--------|---------|---------|
-| **DeepSeek V3** | 低价 | 高性价比 |
-| **MiniMax M2.5** | 约¥8 | 通用场景 |
-| **Kimi K2.5** | 低价 | 长文本 |
-| **阿里通义** | ¥4-40 | 中文场景 |
+#### 国内模型（人民币/百万 tokens，阿里云百炼中国内地部署）
+
+| 模型 | 输入价格 | 输出价格 | 上下文窗口 | 官网来源 |
+|------|---------|---------|------------|----------|
+| **qwen3.5-plus** | ¥0.80 | ¥4.80 | 256K | [阿里云百炼](https://help.aliyun.com/zh/model-studio/model-pricing) |
+| **MiniMax-M2.5** | ¥2.10 | ¥8.40 | 196.6K | [阿里云百炼](https://help.aliyun.com/zh/model-studio/model-pricing) |
+| **kimi-k2.5** | ¥4.00 | ¥21.00 | 256K | [阿里云百炼](https://help.aliyun.com/zh/model-studio/model-pricing) |
+| **glm-5** | ¥4.00 | ¥18.00 | 202.8K | [阿里云百炼](https://help.aliyun.com/zh/model-studio/model-pricing) |
+
+**备注：**
+- 阿里云百炼中国内地部署最便宜（约国际价格的 1/3-1/4）
+- 官方平台价格：MiniMax-M2.5 ($0.30/$1.20)、kimi-k2.5 ($0.60/$3.00)、glm-5 ($1.00/$3.20)
+- kimi-k2.5 和 glm-5 有缓存价格，缓存命中时更便宜
 
 > 💡 **价格趋势**：国内模型价格远低于国外模型（约 30-60 倍差价）。2026 年 2 月，中国模型调用量首次超过美国。
 

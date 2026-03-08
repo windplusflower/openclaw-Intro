@@ -292,13 +292,16 @@ openclaw history export --session "work-project" | Out-File -Encoding UTF8 work-
 └─────────────────────────────────────────┘
 ```
 
-| 模型 | 上下文窗口 | 约等于文字 |
-|------|-----------|-----------|
-| Qwen3.5-Plus | 32K tokens | ~25,000 汉字 |
-| GPT-5.4 | 1.05M tokens | ~800,000 汉字 |
-| Claude Opus 4.6 | 1M tokens | ~800,000 汉字 |
-| Claude Sonnet 4.6 | 1M tokens | ~800,000 汉字 |
-| Gemini 3.1 Pro | 1M tokens | ~800,000 汉字 |
+| 模型 | 上下文窗口 | 约等于文字 | 官网来源 |
+|------|-----------|-----------|----------|
+| **qwen3.5-plus** | 256K tokens | ~200,000 汉字 | [阿里云百炼](https://help.aliyun.com/zh/model-studio/model-pricing) |
+| **GPT-5.4** | 1.05M tokens (922K+128K) | ~800,000 汉字 | [OpenRouter](https://openrouter.ai/openai) |
+| **Claude Opus 4.6** | 1M tokens | ~800,000 汉字 | [Anthropic](https://www.anthropic.com/claude/opus) |
+| **Claude Sonnet 4.6** | 1M tokens | ~800,000 汉字 | [Anthropic](https://www.anthropic.com/claude/opus) |
+| **Gemini 3.1 Pro** | 1M tokens | ~800,000 汉字 | [Google AI](https://ai.google.dev/gemini-api/docs/pricing) |
+| **kimi-k2.5** | 256K tokens | ~200,000 汉字 | [Moonshot](https://platform.moonshot.ai/docs/pricing/chat) |
+| **glm-5** | 202.8K tokens | ~150,000 汉字 | [Z.ai](https://docs.z.ai/guides/overview/pricing) |
+| **MiniMax-M2.5** | 196.6K tokens | ~150,000 汉字 | [MiniMax](https://platform.minimax.io/docs/guides/pricing-paygo) |
 
 ### 超出限制会怎样
 
