@@ -46,6 +46,7 @@ markdown_extensions:
 
 nav:
   - AI 入门:
+    - 01-ai-intro/index.md
     - 01-ai-intro/01-how-ai-works.md
     - 01-ai-intro/02-token-concept.md
     - 01-ai-intro/03-ai-hallucination.md
@@ -53,6 +54,7 @@ nav:
     - 01-ai-intro/05-common-commands.md
     - 01-ai-intro/06-file-paths.md
     - 01-ai-intro/07-code-basics.md
+    - 01-ai-intro/08-core-concepts.md
   - OpenClaw 指南:
     - 02-openclaw-guide/01-what-is-openclaw.md
     - 02-openclaw-guide/02-install-macos.md
