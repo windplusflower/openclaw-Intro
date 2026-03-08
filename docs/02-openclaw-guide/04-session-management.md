@@ -522,34 +522,20 @@ openclaw support --issue "session-lost"
 
 #### macOS / Linux
 
-```bash
-# 备份所有会话
-cp -r ~/.openclaw/sessions/ ~/backups/sessions-$(date +%Y%m%d)/
+**让 AI 帮你备份：**
 
-# 备份单个会话
-openclaw history export --session "important" > ~/backups/important-session.txt
+> "帮我备份所有会话"
 
-# 使用脚本自动备份
-cat > backup-sessions.sh << EOF
-#!/bin/bash
-BACKUP_DIR=~/backups/sessions-\$(date +%Y%m%d)
-mkdir -p \$BACKUP_DIR
-cp -r ~/.openclaw/sessions/ \$BACKUP_DIR/
-echo "备份完成：\$BACKUP_DIR"
-EOF
-chmod +x backup-sessions.sh
-./backup-sessions.sh
-```
+AI 会：
+- ✅ 自动备份所有会话
+- ✅ 设置备份目录
+- ✅ 告诉你备份位置
 
-#### Windows (PowerShell)
+**备份单个会话：**
 
-```powershell
-# 备份所有会话
-Copy-Item -Path "$env:USERPROFILE\.openclaw\sessions" -Destination "$env:USERPROFILE\backups\sessions-$(Get-Date -Format 'yyyyMMdd')" -Recurse
+> "帮我把 'important' 会话导出备份"
 
-# 备份单个会话
-openclaw history export --session "important" | Out-File -Encoding UTF8 "$env:USERPROFILE\backups\important-session.txt"
-```
+AI 会导出指定会话并保存。
 
 ### Q3: 会话有数量限制吗？
 
