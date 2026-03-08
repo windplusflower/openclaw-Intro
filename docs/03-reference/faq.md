@@ -8,18 +8,23 @@
 
 ### Q: 哪些操作需要外网访问权限？
 
-**A:** 以下操作**需要访问外网**：
+**A:** 
 
-| 操作 | 访问目标 | 是否必需 | 国内访问情况 |
+| 操作 | 访问目标 | 网络要求 | 国内访问情况 |
 |------|----------|----------|--------------|
-| **安装 Homebrew/Winget** | GitHub / Microsoft 服务器 | ✅ 首次安装必需 | ❌ 需要代理 |
-| **安装 OpenClaw** | GitHub / npm 仓库 | ✅ 首次安装必需 | ❌ 需要代理 |
-| **使用 OpenAI API** | api.openai.com | ⚠️ 使用该模型时必需 | ❌ 需要代理 |
-| **使用 Anthropic API** | api.anthropic.com | ⚠️ 使用该模型时必需 | ❌ 需要代理 |
-| **使用 Google API** | generativelanguage.googleapis.com | ⚠️ 使用该模型时必需 | ❌ 需要代理 |
-| **使用阿里云百炼** | dashscope.aliyuncs.com | ✅ 使用该模型时必需 | ✅ 国内直连 |
-| **使用百度千帆** | qianfan.baidubce.com | ✅ 使用该模型时必需 | ✅ 国内直连 |
-| **使用智谱 AI** | open.bigmodel.cn | ✅ 使用该模型时必需 | ✅ 国内直连 |
+| **安装 Homebrew/Winget** | GitHub / Microsoft 服务器 | 🔴 需要外网 | ❌ 需要代理 |
+| **安装 OpenClaw** | GitHub / npm 仓库 | 🔴 需要外网 | ❌ 需要代理 |
+| **使用 OpenAI API** | api.openai.com | 🟡 使用该模型时需要 | ❌ 需要代理 |
+| **使用 Anthropic API** | api.anthropic.com | 🟡 使用该模型时需要 | ❌ 需要代理 |
+| **使用 Google API** | generativelanguage.googleapis.com | 🟡 使用该模型时需要 | ❌ 需要代理 |
+| **使用阿里云百炼** | dashscope.aliyuncs.com | 🟢 国内直连 | ✅ 无需代理 |
+| **使用百度千帆** | qianfan.baidubce.com | 🟢 国内直连 | ✅ 无需代理 |
+| **使用智谱 AI** | open.bigmodel.cn | 🟢 国内直连 | ✅ 无需代理 |
+
+**图例说明：**
+- 🔴 **必须外网**：没有外网无法完成（如安装阶段）
+- 🟡 **可选外网**：使用该服务时需要，不用则不需要（如选择国际模型）
+- 🟢 **无需外网**：国内可直接访问
 
 **推荐：** 国内用户优先使用阿里云百炼、百度千帆、智谱 AI 等国内服务商，无需代理即可使用。
 
