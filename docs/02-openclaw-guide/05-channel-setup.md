@@ -110,35 +110,17 @@ Discord 是最受欢迎的配置渠道之一，适合个人使用和社区管理
 
 ### 配置到 OpenClaw
 
-**步骤 1：找到配置文件**
+**🤖 让 AI 帮你配置（推荐）**
 
-OpenClaw 的渠道配置通常位于：
+获取 Bot Token 后，**不要手动编辑配置文件**！直接告诉你的 AI 助手：
 
-**macOS:**
-```bash
-cd ~/.openclaw/workspace
-code config.yaml
-```
+> "帮我配置 Discord 渠道，Bot Token 是 xxx"
 
-**Windows:**
-```powershell
-cd $env:USERPROFILE\.openclaw\workspace
-code config.yaml
-```
-
-**步骤 2：添加 Discord 配置**
-
-在配置文件中添加以下内容：
-
-```yaml
-channels:
-  discord:
-    enabled: true
-    token: "你的_BOT_TOKEN_粘贴在这里"
-    # 可选配置
-    prefix: "!"           # 命令前缀
-    default_channel: ""   # 默认频道 ID
-```
+AI 会：
+- ✅ 自动找到正确的配置文件位置
+- ✅ 正确填写配置格式
+- ✅ 自动重启 OpenClaw 使配置生效
+- ✅ 测试连接并告诉你结果
 
 **步骤 3：邀请 Bot 到服务器**
 
@@ -159,15 +141,16 @@ channels:
 
 **步骤 1：重启 OpenClaw**
 
-配置完成后，需要重启 OpenClaw 使配置生效：
+如果你让 AI 帮忙配置，AI 会自动重启。如果需要手动重启：
 
 **macOS:**
 ```bash
 # 如果使用 PM2
 pm2 restart openclaw
 
-# 或者直接重启
-openclaw restart
+# 或者使用 TUI
+openclaw tui
+# 然后说："帮我重启 OpenClaw"
 ```
 
 **Windows:**
@@ -175,8 +158,9 @@ openclaw restart
 # 如果使用 PM2
 pm2 restart openclaw
 
-# 或者在 PowerShell 中
-openclaw restart
+# 或者使用 TUI
+openclaw tui
+# 然后说："帮我重启 OpenClaw"
 ```
 
 **步骤 2：发送测试消息**
@@ -268,23 +252,19 @@ cd ~/.openclaw/workspace
 code config.yaml
 ```
 
-**Windows:**
-```powershell
-cd $env:USERPROFILE\.openclaw\workspace
-code config.yaml
-```
+### 配置到 OpenClaw
 
-**步骤 2：添加飞书配置**
+**🤖 让 AI 帮你配置（推荐）**
 
-```yaml
-channels:
-  feishu:
-    enabled: true
-    app_id: "cli_xxxxxxxxxxxxxxx"
-    app_secret: "xxxxxxxxxxxxxxxxxxxxxxxxx"
-    verification_token: "xxxxxxxxxxxxx"  # 事件订阅中的验证令牌
-    encrypt_key: "xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx"  # 如果启用了加密
-```
+获取所有凭证后，**不要手动编辑配置文件**！直接告诉你的 AI 助手：
+
+> "帮我配置飞书渠道，AppId 是 xxx，AppSecret 是 xxx，VerificationToken 是 xxx"
+
+AI 会：
+- ✅ 自动找到正确的配置文件位置
+- ✅ 正确填写配置格式
+- ✅ 自动重启 OpenClaw 使配置生效
+- ✅ 测试连接并告诉你结果
 
 **步骤 3：添加到飞书群组**
 
@@ -297,12 +277,16 @@ channels:
 
 **步骤 1：重启 OpenClaw**
 
+如果你让 AI 帮忙配置，AI 会自动重启。如果需要手动重启，使用 TUI：
+
 ```bash
-# macOS
-openclaw restart
+# macOS/Linux
+openclaw tui
+# 然后说："帮我重启 OpenClaw"
 
 # Windows
-openclaw restart
+openclaw tui
+# 然后说："帮我重启 OpenClaw"
 ```
 
 **步骤 2：发送测试消息**
@@ -378,22 +362,19 @@ cd ~/.openclaw/workspace
 code config.yaml
 ```
 
-**Windows:**
-```powershell
-cd $env:USERPROFILE\.openclaw\workspace
-code config.yaml
-```
+### 配置到 OpenClaw
 
-**步骤 2：添加钉钉配置**
+**🤖 让 AI 帮你配置（推荐）**
 
-```yaml
-channels:
-  dingtalk:
-    enabled: true
-    app_key: "dingxxxxxxxxxxxxxx"
-    app_secret: "xxxxxxxxxxxxxxxxxxxxxxxxx"
-    agent_id: "123456789"  # 如果有多个应用
-```
+获取所有凭证后，**不要手动编辑配置文件**！直接告诉你的 AI 助手：
+
+> "帮我配置钉钉渠道，AppKey 是 xxx，AppSecret 是 xxx，AgentId 是 xxx"
+
+AI 会：
+- ✅ 自动找到正确的配置文件位置
+- ✅ 正确填写配置格式
+- ✅ 自动重启 OpenClaw 使配置生效
+- ✅ 测试连接并告诉你结果
 
 **步骤 3：添加到钉钉群组**
 
@@ -407,12 +388,16 @@ channels:
 
 **步骤 1：重启 OpenClaw**
 
+如果你让 AI 帮忙配置，AI 会自动重启。如果需要手动重启，使用 TUI：
+
 ```bash
-# macOS
-openclaw restart
+# macOS/Linux
+openclaw tui
+# 然后说："帮我重启 OpenClaw"
 
 # Windows
-openclaw restart
+openclaw tui
+# 然后说："帮我重启 OpenClaw"
 ```
 
 **步骤 2：发送测试消息**
@@ -434,30 +419,22 @@ openclaw restart
 
 ### 同时配置多个渠道
 
-OpenClaw 支持同时运行在多个渠道上。配置示例：
+**🤖 让 AI 帮你配置（推荐）**
 
-```yaml
-channels:
-  discord:
-    enabled: true
-    token: "DISCORD_TOKEN_HERE"
-    prefix: "!"
-  
-  feishu:
-    enabled: true
-    app_id: "cli_xxxxxxxxxxxxxxx"
-    app_secret: "xxxxxxxxxxxxxxxxxxxxxxxxx"
-  
-  dingtalk:
-    enabled: true
-    app_key: "dingxxxxxxxxxxxxxx"
-    app_secret: "xxxxxxxxxxxxxxxxxxxxxxxxx"
-```
+直接告诉你的 AI 助手：
+
+> "我想同时配置 Discord、飞书和钉钉三个渠道，这是所有凭证..."
+
+AI 会：
+- ✅ 自动配置所有渠道
+- ✅ 正确填写每个渠道的凭证
+- ✅ 自动重启 OpenClaw
+- ✅ 测试所有渠道的连接
 
 **配置要点：**
-- ✅ 每个渠道的 `enabled` 设为 `true`
-- ✅ 确保每个渠道的凭证正确
+- ✅ 每个渠道的凭证要对应正确的平台
 - ✅ 可以为不同渠道设置不同的前缀或行为
+- ✅ AI 会帮你验证所有配置是否正确
 
 ### 渠道优先级
 
@@ -529,14 +506,14 @@ openclaw reload config
 **步骤：**
 1. 创建 Discord Bot（参考上文）
 2. 获取 Bot Token
-3. 编辑 `config.yaml` 添加 Discord 配置
-4. 邀请 Bot 到你的测试服务器
-5. 重启 OpenClaw
+3. **告诉 AI**："帮我配置 Discord 渠道，Bot Token 是 xxx"
+4. AI 自动完成配置并重启
+5. 邀请 Bot 到你的测试服务器
 6. 发送 `!help` 测试
 
 **检查清单：**
 - [ ] Bot 已添加到服务器
-- [ ] 配置文件语法正确
+- [ ] AI 确认配置成功
 - [ ] Token 没有复制错误
 - [ ] OpenClaw 日志无报错
 - [ ] Bot 成功回复消息
@@ -553,15 +530,15 @@ openclaw reload config
 1. 创建飞书企业自建应用
 2. 获取 App ID 和 Secret
 3. 配置事件订阅（可使用 ngrok 测试）
-4. 编辑配置文件添加飞书信息
-5. 将 Bot 添加到飞书群组
-6. 重启 OpenClaw 并测试
+4. **告诉 AI**："帮我配置飞书渠道，AppId 是 xxx，AppSecret 是 xxx"
+5. AI 自动完成配置并重启
+6. 将 Bot 添加到飞书群组并测试
 
 **检查清单：**
 - [ ] 应用已创建并审批通过
 - [ ] 事件订阅地址可访问
 - [ ] 权限已申请并通过
-- [ ] 配置文件中凭证正确
+- [ ] AI 确认配置成功
 - [ ] 群组中@Bot 有响应
 
 
@@ -574,7 +551,8 @@ openclaw reload config
 
 **步骤：**
 1. 完成示例 1 和示例 2
-2. 在配置文件中同时启用两个渠道
+2. **告诉 AI**："我想同时启用 Discord 和飞书两个渠道"
+3. AI 会自动配置并验证两个渠道
 3. 设置不同优先级
 4. 重启 OpenClaw
 5. 分别在两个平台发送消息
