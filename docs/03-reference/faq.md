@@ -4,7 +4,77 @@
 
 ---
 
-## 安装相关
+## 🌐 网络相关
+
+### Q: 哪些操作需要外网访问权限？
+
+**A:** 以下操作**需要访问外网**：
+
+| 操作 | 访问目标 | 是否必需 | 国内访问情况 |
+|------|----------|----------|--------------|
+| **安装 Homebrew/Winget** | GitHub / Microsoft 服务器 | ✅ 首次安装必需 | ❌ 需要代理 |
+| **安装 OpenClaw** | GitHub / npm 仓库 | ✅ 首次安装必需 | ❌ 需要代理 |
+| **使用 OpenAI API** | api.openai.com | ⚠️ 使用该模型时必需 | ❌ 需要代理 |
+| **使用 Anthropic API** | api.anthropic.com | ⚠️ 使用该模型时必需 | ❌ 需要代理 |
+| **使用 Google API** | generativelanguage.googleapis.com | ⚠️ 使用该模型时必需 | ❌ 需要代理 |
+| **使用阿里云百炼** | dashscope.aliyuncs.com | ✅ 使用该模型时必需 | ✅ 国内直连 |
+| **使用百度千帆** | qianfan.baidubce.com | ✅ 使用该模型时必需 | ✅ 国内直连 |
+| **使用智谱 AI** | open.bigmodel.cn | ✅ 使用该模型时必需 | ✅ 国内直连 |
+
+**推荐：** 国内用户优先使用阿里云百炼、百度千帆、智谱 AI 等国内服务商，无需代理即可使用。
+
+---
+
+### Q: 已有节点，如何配置外网访问？
+
+**A:** 如果你已经有可以访问外网的节点（服务器/VPS），有两种方案：
+
+**方案一：在节点上直接安装（推荐）**
+
+节点通常本身就能访问外网，直接在节点上安装 OpenClaw 即可。这是最简单的方式。
+
+**方案二：本地通过节点代理访问**
+
+如果想在本地电脑安装，需要配置代理通过节点访问外网：
+
+**macOS/Linux:**
+```bash
+# 配置系统代理
+export https_proxy=http://你的节点 IP:端口
+export http_proxy=http://你的节点 IP:端口
+
+# 配置 Git 代理（如果需要）
+git config --global http.proxy http://你的节点 IP:端口
+git config --global https.proxy http://你的节点 IP:端口
+
+# 验证代理
+curl -I https://github.com
+```
+
+**Windows (PowerShell):**
+```powershell
+# 配置系统代理（临时）
+$env:HTTPS_PROXY="http://你的节点 IP:端口"
+$env:HTTP_PROXY="http://你的节点 IP:端口"
+
+# 配置 Git 代理（如果需要）
+git config --global http.proxy http://你的节点 IP:端口
+git config --global https.proxy http://你的节点 IP:端口
+
+# 验证代理
+curl -I https://github.com
+```
+
+**永久配置（Windows）：**
+1. 设置 → 网络和 Internet → 代理
+2. 手动设置代理服务器地址（你的节点 IP:端口）
+
+**让 AI 帮你配置：**
+> "帮我配置代理，节点地址是 xxx.xxx.xxx.xxx:端口"
+
+AI 会帮你自动配置好所有代理设置。
+
+---
 
 ### Q: 安装失败怎么办？
 
@@ -17,6 +87,7 @@
      npm config set registry https://registry.npmmirror.com
      ```
    - 对于 Git 克隆失败，检查是否能访问 GitHub
+   - **如果有节点，配置代理后重试（见上方问题）**
 
 2. **权限问题**
    - 确保有足够的文件系统权限

@@ -10,8 +10,78 @@
 |------|------|
 | **系统** | macOS 10.15 (Catalina) 或更高 |
 | **包管理器** | Homebrew（推荐） |
-| **网络** | 能访问 GitHub 和 AI 服务 API |
+| **网络** | 能访问 GitHub 和 AI 服务 API（见下方网络要求说明） |
 | **权限** | 需要管理员权限安装 |
+
+---
+
+## 🌐 网络要求说明
+
+### 需要外网访问的操作
+
+以下操作**需要访问外网**：
+
+| 操作 | 访问目标 | 是否必需 |
+|------|----------|----------|
+| **安装 Homebrew** | GitHub (`raw.githubusercontent.com`) | ✅ 首次安装必需 |
+| **安装 OpenClaw** | GitHub / npm 仓库 | ✅ 首次安装必需 |
+| **使用国际 AI 模型** | OpenAI、Anthropic、Google 等 API | ⚠️ 使用该模型时必需 |
+| **使用国内 AI 模型** | 阿里云百炼、百度千帆等 | ✅ 国内可直连，无需代理 |
+
+### 已有节点时的网络配置
+
+如果你已经有可以访问外网的节点（服务器/VPS），有两种方案：
+
+**方案一：在节点上直接安装（推荐）**
+
+节点通常本身就能访问外网，直接在节点上安装即可：
+
+```bash
+# 在节点上执行
+brew install openclaw  # macOS
+# 或
+winget install openclaw  # Windows
+```
+
+**方案二：本地通过节点代理访问**
+
+如果想在本地电脑安装，通过节点代理访问外网：
+
+1. **配置系统代理**
+   ```bash
+   # macOS/Linux
+   export https_proxy=http://你的节点 IP:端口
+   export http_proxy=http://你的节点 IP:端口
+   
+   # Windows (PowerShell)
+   $env:HTTPS_PROXY="http://你的节点 IP:端口"
+   $env:HTTP_PROXY="http://你的节点 IP:端口"
+   ```
+
+2. **配置 Git 代理**（如果安装需要 Git）
+   ```bash
+   git config --global http.proxy http://你的节点 IP:端口
+   git config --global https.proxy http://你的节点 IP:端口
+   ```
+
+3. **验证代理**
+   ```bash
+   curl -I https://github.com
+   ```
+
+### 推荐使用的 AI 服务商
+
+根据网络环境选择：
+
+**国内用户（无需代理）：**
+- ✅ 阿里云百炼（qwen3.5-plus、kimi-k2.5、glm-5、MiniMax-M2.5）
+- ✅ 百度千帆（ERNIE）
+- ✅ 智谱 AI（GLM）
+
+**有外网访问能力：**
+- ✅ OpenAI（GPT 系列）
+- ✅ Anthropic（Claude 系列）
+- ✅ Google（Gemini 系列）
 
 ---
 
