@@ -127,28 +127,35 @@ openclaw onboard
 
 ---
 
-## 🎯 初次启动
+## 🎯 开始使用 OpenClaw
 
-### 启动 OpenClaw
+安装完成后，你有两种方式与 OpenClaw 对话：
+
+### 方式一：使用 TUI（终端界面）
 
 ```powershell
-# 启动 OpenClaw
-openclaw
+# 启动终端对话界面
+openclaw tui
 
-# 你应该看到类似输出：
-# 🦞 OpenClaw 已启动
-# 请输入你的命令：
+# 然后直接输入你的问题
+你好
 ```
+
+### 方式二：使用 Web Dashboard（推荐）
+
+1. 打开浏览器访问：`http://localhost:3000`（或你的配置地址）
+2. 在 Dashboard 中直接与 AI 对话
+3. 可以查看会话历史、Token 消耗等
 
 ### 测试对话
 
-```powershell
-# 在 OpenClaw 中输入
-你好
+无论使用哪种方式，都可以直接输入：
 
-# AI 应该回复
-你好！有什么我可以帮助你的吗？
 ```
+你好，帮我配置一下 API
+```
+
+AI 会引导你完成后续配置。
 
 ---
 
@@ -204,8 +211,8 @@ $env:HTTP_PROXY="http://127.0.0.1:7890"
 # 手动启动配置
 openclaw config --wizard
 
-# 或者直接告诉 AI 你的问题
-openclaw
+# 或者启动 TUI 后告诉 AI 你的问题
+openclaw tui
 # 然后输入："帮我检查配置"
 ```
 
@@ -227,8 +234,8 @@ openclaw onboard
 
 # 4. 根据向导提示，输入你的 API Key
 
-# 5. 启动 OpenClaw
-openclaw
+# 5. 启动终端对话界面
+openclaw tui
 
 # 6. 测试对话
 你好
@@ -237,8 +244,8 @@ openclaw
 ### 示例 2：让 AI 帮你配置百炼 API
 
 ```powershell
-# 启动 OpenClaw
-openclaw
+# 启动终端对话界面
+openclaw tui
 
 # 然后直接说：
 帮我配置百炼 API，我的 Key 是 sk-xxxxxxxx
@@ -247,8 +254,8 @@ openclaw
 ### 示例 3：让 AI 帮你设置上下文压缩
 
 ```powershell
-# 启动 OpenClaw
-openclaw
+# 启动终端对话界面
+openclaw tui
 
 # 然后直接说：
 帮我开启上下文压缩功能
@@ -291,8 +298,8 @@ openclaw version
 ### 技巧 4：让 AI 帮你排查问题
 
 ```powershell
-# 如果遇到问题，直接问 AI
-openclaw
+# 如果遇到问题，启动 TUI 后问 AI
+openclaw tui
 # 然后输入："帮我检查配置是否正确"
 ```
 
