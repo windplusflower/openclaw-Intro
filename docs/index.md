@@ -27,25 +27,32 @@
 
 ## 📖 阅读路线
 
-```
-第一部分：AI 入门
-├── AI 如何工作
-├── Token 概念
-├── AI 为什么会胡说
-├── 终端入门
-├── 常用命令
-├── 文件路径概念
-├── 代码是什么
-└── API Key 配置
+### 第一部分：AI 入门（7 章）
 
-第二部分：OpenClaw 指南
-├── OpenClaw 是什么
-├── macOS 安装
-├── Windows 安装
-├── 会话管理
-├── 渠道配置
-└── 技能系统
 ```
+├── 01 AI 如何工作
+├── 02 Token 概念与 API 基础
+├── 03 AI 为什么会胡说
+├── 04 终端入门
+├── 05 常用命令
+├── 06 文件路径概念
+└── 07 代码是什么
+```
+
+**说明：** API Key 配置已整合到第 2 章"Token 概念与 API 基础"，不再单独成章。
+
+### 第二部分：OpenClaw 指南（6 章）
+
+```
+├── 01 OpenClaw 是什么
+├── 02 macOS 安装指南
+├── 03 Windows 安装指南
+├── 04 会话管理
+├── 05 渠道配置
+└── 06 技能系统
+```
+
+**说明：** macOS 和 Windows 安装指南分开为两章，每章都包含完整的安装步骤和网络配置说明。
 
 ---
 
@@ -62,11 +69,12 @@
 
 ## 📝 配套材料
 
-1. [终端速查手册](./03-reference/command-cheatsheet.md) - Mac/Windows 命令对照表
-2. [安装指南](./02-openclaw-guide/) - Mac/Windows 图文步骤
-3. [配置文件位置速查](./03-reference/config-locations.md) - 双平台路径对照
-4. [常见问题 FAQ](./03-reference/faq.md) - Mac/Windows 分别说明
-5. [问题排查](./03-reference/troubleshooting.md) - 常见错误和解决方法
+### 参考文档（03-reference）
+
+1. [命令速查手册](./03-reference/command-cheatsheet.md) - Mac/Windows 命令对照表
+2. [常见问题 FAQ](./03-reference/faq.md) - 网络配置、安装问题等
+3. [问题排查指南](./03-reference/troubleshooting.md) - 安装阶段 vs 运行阶段排查
+4. [自动化示例](./03-reference/automation-examples.md) - 让 AI 帮你完成自动化任务
 
 ---
 
@@ -74,13 +82,14 @@
 
 阅读完本文档后，您将能：
 
-- ✅ 理解 AI 工作原理和局限
+- ✅ 理解 AI 工作原理和局限（Token、幻觉等）
 - ✅ 了解终端基础命令（Mac/Windows）
-- ✅ 理解代码和 API 概念
-- ✅ 了解 OpenClaw 安装和配置（Mac/Windows）
-- ✅ 了解多渠道配置和切换
-- ✅ 了解技能加载和使用
-- ✅ 了解基础问题排查
+- ✅ 理解代码和 API 概念（无需自己写代码）
+- ✅ 完成 OpenClaw 安装（Mac/Windows 分别指导）
+- ✅ 配置网络环境（外网访问/国内直连）
+- ✅ 让 AI 帮你完成所有配置（渠道、API 等）
+- ✅ 让 AI 帮你排查问题（运行阶段）
+- ✅ 让 AI 帮你创建自动化任务
 
 ---
 
