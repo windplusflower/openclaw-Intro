@@ -63,6 +63,7 @@ nav:
     - 02-openclaw-guide/05-channel-setup.md
     - 02-openclaw-guide/06-skill-system.md
   - 参考:
+    - 03-reference/01-glossary.md
     - 03-reference/command-cheatsheet.md
     - 03-reference/config-locations.md
     - 03-reference/api-setup.md
