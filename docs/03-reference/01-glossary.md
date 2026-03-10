@@ -45,9 +45,11 @@ AI 领域有太多相似的名词，小白很容易懵逼：
 | **适合** | 需要完整功能、稳定性要求高 |
 | **缺点** | 太重、太复杂、资源占用大 |
 | **官网** | https://openclaw.ai |
-| **GitHub** | https://github.com/openclaw-ai/openclaw |
+| **GitHub** | https://github.com/openclaw/openclaw |
 
 **一句话**：功能强大的重型框架，像"航空母舰"
+
+**注意**：OpenClaw ≠ OpenCode，它们是两个不同的项目！
 
 ---
 
