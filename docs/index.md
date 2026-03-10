@@ -74,10 +74,11 @@
 
 ### 参考文档（03-reference）
 
-1. [命令速查手册](./03-reference/command-cheatsheet.md) - Mac/Windows 命令对照表
-2. [常见问题 FAQ](./03-reference/faq.md) - 网络配置、安装问题等
-3. [问题排查指南](./03-reference/troubleshooting.md) - 安装阶段 vs 运行阶段排查
-4. [自动化示例](./03-reference/automation-examples.md) - 让 AI 帮你完成自动化任务
+1. **[名词解释附录](./03-reference/01-glossary.md)** - OpenClaw/Nanobot/Cursor 等名词扫盲（新手必读！）
+2. [命令速查手册](./03-reference/command-cheatsheet.md) - Mac/Windows 命令对照表
+3. [常见问题 FAQ](./03-reference/faq.md) - 网络配置、安装问题等
+4. [问题排查指南](./03-reference/troubleshooting.md) - 安装阶段 vs 运行阶段排查
+5. [自动化示例](./03-reference/automation-examples.md) - 让 AI 帮你完成自动化任务
 
 ---
 
