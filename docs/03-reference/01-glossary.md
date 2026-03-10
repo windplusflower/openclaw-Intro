@@ -35,22 +35,19 @@ AI 领域有太多相似的名词，小白很容易懵逼：
 
 这些是**运行 AI 助手的平台**，让你能在 Discord、飞书、微信等地方和 AI 聊天。
 
-### OpenClaw / OpenCode 🐾
+### OpenClaw 🐾
 
 | 项目 | 说明 |
 |------|------|
 | **是什么** | AI 助手框架（TypeScript 编写） |
-| **别名** | OpenCode（中文名） |
 | **代码量** | 430,000+ 行 |
 | **特点** | 功能全面、生产级、企业级 |
 | **适合** | 需要完整功能、稳定性要求高 |
 | **缺点** | 太重、太复杂、资源占用大 |
-| **官网** | https://opencode.ai |
-| **GitHub** | https://github.com/opencode-ai/opencode |
+| **官网** | https://openclaw.ai |
+| **GitHub** | https://github.com/openclaw-ai/openclaw |
 
 **一句话**：功能强大的重型框架，像"航空母舰"
-
-**注意**：OpenClaw 和 OpenCode 是同一个东西，只是叫法不同！
 
 ---
 
@@ -80,6 +77,25 @@ AI 领域有太多相似的名词，小白很容易懵逼：
 | **官网** | https://clawhub.com |
 
 **一句话**：OpenClaw 的技能应用商店
+
+---
+
+### OpenCode 💻
+
+| 项目 | 说明 |
+|------|------|
+| **是什么** | 开源终端 AI 编程助手（类似 Claude Code） |
+| **代码量** | 120K+ GitHub stars |
+| **特点** | 终端原生、免费开源、支持多种 LLM |
+| **适合** | 程序员、开发者、需要 AI 辅助编程 |
+| **官网** | https://opencode.ai |
+| **GitHub** | https://github.com/opencode-ai/opencode |
+
+**一句话**：开源版的"Claude Code"，终端编程神器
+
+**注意**：OpenCode 和 OpenClaw 是**两个不同的项目**！
+- OpenCode = 编程助手（写代码用）
+- OpenClaw = AI 助手框架（聊天机器人用）
 
 ---
 
